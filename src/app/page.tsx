@@ -184,6 +184,43 @@ export default function Home() {
             </div>
           </div>
         </main>
+
+        {/* About */}
+        <section
+          id="about"
+          className="border-t border-zinc-200 px-6 py-16 md:px-16 md:py-24 dark:border-zinc-800"
+        >
+          <div className="w-full max-w-2xl">
+            <p className="text-xs font-semibold tracking-wider">
+              <span className="text-zinc-400 dark:text-zinc-500">01</span>{" "}
+              <span className="text-orange-500">ABOUT</span>
+            </p>
+
+            <p className="mt-6 text-2xl leading-9 font-medium text-zinc-900 md:text-3xl md:leading-[2.75rem] dark:text-zinc-100">
+              I build the measurement layer behind growth — clean GA4/GTM
+              pipelines, Adjust MMP setup, and CRO programs that turn traffic
+              into revenue. I treat marketing as an engineering problem:
+              instrument first, optimize on evidence, ship.
+            </p>
+
+            <a
+              href="#contact"
+              className="mt-10 inline-flex items-center gap-2 text-sm font-semibold text-orange-500 transition-colors hover:text-orange-600"
+            >
+              More about me
+              <svg viewBox="0 0 24 24" className="h-4 w-4" aria-hidden>
+                <path
+                  d="M5 12h14M13 6l6 6-6 6"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </a>
+          </div>
+        </section>
       </div>
 
       {/* Mobile bottom navigation */}
