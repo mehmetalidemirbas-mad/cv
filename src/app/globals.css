@@ -16,6 +16,8 @@
   --accent-press: #ea580c;
   --accent-tint: #fff1e7;
   --accent-ink: #c2410c;
+  --dark: #0f1b34;
+  --dark-muted: #aab3c4;
   --radius: 14px;
   --sidebar-w: 264px;
   --wrap: 940px;
@@ -474,7 +476,7 @@ main {
 /* ------------------------------------------------------------------ hero -- */
 
 .hero {
-  background: #0b0b0c;
+  background: var(--dark);
   color: #fff;
   padding: 60px 0 72px;
 }
@@ -526,7 +528,7 @@ main {
   margin-top: 22px;
   max-width: 540px;
   font-size: clamp(16px, 2.2vw, 19px);
-  color: #b6b6bb;
+  color: var(--dark-muted);
 }
 
 .sub b {
@@ -719,14 +721,14 @@ main {
 }
 
 .contact-card {
-  background: #0b0b0c;
+  background: var(--dark);
   color: #fff;
   border-radius: 26px;
   padding: 52px 48px;
 }
 
 .contact-card .eyebrow .num {
-  color: #8a8a90;
+  color: #828ba3;
 }
 
 .contact-card h2 {
@@ -737,7 +739,7 @@ main {
 
 .contact-card p {
   margin-top: 14px;
-  color: #b6b6bb;
+  color: var(--dark-muted);
   font-size: 16px;
   max-width: 560px;
 }
