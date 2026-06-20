@@ -595,6 +595,10 @@ main {
   align-items: start;
 }
 
+.about-bio {
+  max-width: 680px;
+}
+
 .about-bio p {
   font-size: clamp(18px, 2.4vw, 22px);
   line-height: 1.5;

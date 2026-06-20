@@ -2,8 +2,6 @@ import Link from "next/link";
 import { IconArrowRight, IconLinkedIn } from "./_components/icons";
 import { socials } from "./_components/nav-items";
 
-const expertise = ["GA4", "GTM", "Adjust", "CRO", "SEO", "Paid Media", "Looker Studio"];
-
 const posts = [
   {
     cat: "Analytics",
@@ -64,33 +62,20 @@ export default function Home() {
 
       <section className="block" id="about">
         <div className="wrap">
-          <div className="about-grid">
-            <div className="about-bio" data-reveal>
-              <span className="eyebrow">
-                <span className="num">01</span> About
-              </span>
-              <p style={{ marginTop: 24 }}>
-                I build the measurement layer behind growth — clean GA4/GTM pipelines, Adjust MMP
-                setup, and CRO programs that turn traffic into revenue. I treat marketing as an
-                engineering problem: instrument first, optimize on evidence, ship.
-              </p>
-            </div>
-            <div className="about-tags" data-reveal>
-              <span className="tags-label">Areas of expertise</span>
-              <div className="pills">
-                {expertise.map((tag) => (
-                  <span className="pill" key={tag}>
-                    <span className="d" />
-                    {tag}
-                  </span>
-                ))}
-              </div>
-              <div className="foot-link" style={{ marginTop: 14 }}>
-                <Link className="link-more" href="/about">
-                  More about me
-                  <IconArrowRight />
-                </Link>
-              </div>
+          <div className="about-bio" data-reveal>
+            <span className="eyebrow">
+              <span className="num">01</span> About
+            </span>
+            <p style={{ marginTop: 24 }}>
+              I build the measurement layer behind growth — clean GA4/GTM pipelines, Adjust MMP
+              setup, and CRO programs that turn traffic into revenue. I treat marketing as an
+              engineering problem: instrument first, optimize on evidence, ship.
+            </p>
+            <div className="foot-link" style={{ marginTop: 18 }}>
+              <Link className="link-more" href="/about">
+                More about me
+                <IconArrowRight />
+              </Link>
             </div>
           </div>
         </div>
