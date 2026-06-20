@@ -47,6 +47,10 @@ export default function StackPage() {
     <main id="top">
       <header className="page-head">
         <div className="wrap inner">
+          <span className="eyebrow-dash" data-reveal>
+            <span className="dash" />
+            Stack
+          </span>
           <h1 data-reveal>Stack.</h1>
           <p className="ph-sub" data-reveal>
             Software I use to craft something valuable.

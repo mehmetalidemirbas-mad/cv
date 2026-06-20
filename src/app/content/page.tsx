@@ -33,6 +33,10 @@ export default function ContentPage() {
     <main id="top">
       <header className="page-head">
         <div className="wrap inner">
+          <span className="eyebrow-dash" data-reveal>
+            <span className="dash" />
+            Content
+          </span>
           <h1 data-reveal>Content.</h1>
           <p className="ph-sub" data-reveal>
             Growth, CRO and analytics frameworks — unpacked one idea at a time on LinkedIn.

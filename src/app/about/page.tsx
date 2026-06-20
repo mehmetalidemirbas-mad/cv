@@ -69,6 +69,10 @@ export default function AboutPage() {
     <main id="top">
       <header className="page-head">
         <div className="wrap inner">
+          <span className="eyebrow-dash" data-reveal>
+            <span className="dash" />
+            About
+          </span>
           <h1 data-reveal>About me.</h1>
           <p className="ph-sub" data-reveal>
             Growth marketer. Data person. Builder.
