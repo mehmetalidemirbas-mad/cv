@@ -526,11 +526,13 @@ main {
 }
 
 /* Brighter accent on the navy (dark) surfaces */
-.hero .eyebrow-dash {
+.hero .eyebrow-dash,
+.page-head .eyebrow-dash {
   color: var(--accent-bright);
 }
 
-.hero .eyebrow-dash .dash {
+.hero .eyebrow-dash .dash,
+.page-head .eyebrow-dash .dash {
   background: var(--accent-bright);
 }
 
@@ -768,11 +770,17 @@ main {
 /* ------------------------------------------------------------ page head --- */
 
 .page-head {
-  position: relative;
-  padding: 64px 0 4px;
+  background: var(--dark);
+  color: #fff;
+  padding: 60px 0 56px;
+}
+
+.page-head + .block {
+  border-top: none;
 }
 
 .page-head h1 {
+  color: #fff;
   margin-top: 16px;
   font-size: clamp(36px, 5.4vw, 56px);
 }
@@ -780,12 +788,12 @@ main {
 .ph-sub {
   margin-top: 16px;
   max-width: 560px;
-  color: var(--muted);
+  color: var(--dark-muted);
   font-size: clamp(16px, 2.2vw, 19px);
 }
 
 .ph-sub b {
-  color: var(--fg);
+  color: #fff;
   font-weight: 600;
 }
 
