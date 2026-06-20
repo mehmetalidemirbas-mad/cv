@@ -922,7 +922,9 @@ main {
 }
 
 .nudge {
-  padding: 48px 0 8px;
+  background: var(--dark);
+  color: #fff;
+  padding: 52px 0;
 }
 
 .nudge .inner {
@@ -941,11 +943,11 @@ main {
 }
 
 .nudge .big a {
-  color: var(--accent);
+  color: var(--accent-bright);
 }
 
 .nudge .big a:hover {
-  color: var(--accent-press);
+  color: #5eead4;
 }
 
 /* ------------------------------------------------------------ stack page -- */
