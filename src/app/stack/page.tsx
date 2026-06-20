@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import BrandIcon from "../_components/BrandIcon";
-import { IconArrowRight } from "../_components/icons";
+import ContactCard from "../_components/ContactCard";
 
 export const metadata: Metadata = {
   title: "Stack",
@@ -88,17 +87,7 @@ export default function StackPage() {
         </div>
       </section>
 
-      <section className="nudge">
-        <div className="wrap inner">
-          <p className="big" data-reveal>
-            Want to work together? <Link href="/contact">Let&rsquo;s talk →</Link>
-          </p>
-          <Link className="btn btn--primary" data-reveal href="/contact">
-            Contact
-            <IconArrowRight />
-          </Link>
-        </div>
-      </section>
+      <ContactCard />
     </main>
   );
 }
