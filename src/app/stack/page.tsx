@@ -1,43 +1,50 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import BrandIcon from "../_components/BrandIcon";
+import { IconArrowRight } from "../_components/icons";
 
 export const metadata: Metadata = {
   title: "Stack",
   description: "The tools Ali Demirbaş instruments, queries and optimizes growth with every day.",
 };
 
+// Logos come from each tool's own domain (Google favicon service) so every
+// tile renders — even brands that aren't on icon sets.
+const logoSrc = (domain: string) =>
+  `https://www.google.com/s2/favicons?domain=${domain}&sz=128`;
+
 const groups = [
   {
     title: "Design & Build",
     tools: [
-      { name: "N8N", icon: "n8n", tag: "Automation" },
-      { name: "ChatGPT", icon: "openai", tag: "OpenAI" },
-      { name: "Framer", icon: "framer", tag: "Web Design Platform" },
-      { name: "Lovable", icon: "lovable", tag: "AI Code Editor" },
-      { name: "Figma", icon: "figma", tag: "Design Tool" },
+      { name: "N8N", domain: "n8n.io", tag: "Automation" },
+      { name: "ChatGPT", domain: "openai.com", tag: "OpenAI" },
+      { name: "Framer", domain: "framer.com", tag: "Web Design Platform" },
+      { name: "Lovable", domain: "lovable.dev", tag: "AI Code Editor" },
+      { name: "Figma", domain: "figma.com", tag: "Design Tool" },
     ],
   },
   {
     title: "Data & Analytics",
     tools: [
-      { name: "Mixpanel", icon: "mixpanel", tag: "Product Analytics" },
-      { name: "Looker Studio", icon: "looker", tag: "Data Visualisation" },
-      { name: "Adjust", icon: "adjust", tag: "Mobile App Analytics" },
+      { name: "Mixpanel", domain: "mixpanel.com", tag: "Product Analytics" },
+      { name: "Looker Studio", domain: "lookerstudio.google.com", tag: "Data Visualisation" },
+      { name: "Adjust", domain: "adjust.com", tag: "Mobile App Analytics" },
     ],
   },
   {
     title: "CRM & Engagement",
     tools: [
-      { name: "Intercom", icon: "intercom", tag: "The complete customer service platform" },
-      { name: "Hubspot", icon: "hubspot", tag: "Customer Relations Platform" },
-      { name: "Insider", icon: "useinsider", tag: "Omnichannel Marketing" },
+      { name: "Intercom", domain: "intercom.com", tag: "The complete customer service platform" },
+      { name: "Hubspot", domain: "hubspot.com", tag: "Customer Relations Platform" },
+      { name: "Insider", domain: "useinsider.com", tag: "Omnichannel Marketing" },
     ],
   },
   {
     title: "Work Management",
     tools: [
-      { name: "Notion", icon: "notion", tag: "Work Management Tool" },
-      { name: "Arc", icon: "arc", tag: "Browser" },
+      { name: "Notion", domain: "notion.so", tag: "Work Management Tool" },
+      { name: "Arc", domain: "arc.net", tag: "Browser" },
     ],
   },
 ];
@@ -67,7 +74,7 @@ export default function StackPage() {
                 <div className="sg-grid">
                   {group.tools.map((tool) => (
                     <div className="sg-tool" key={tool.name}>
-                      <BrandIcon name={tool.name} icon={tool.icon} />
+                      <BrandIcon name={tool.name} src={logoSrc(tool.domain)} />
                       <span className="meta">
                         <span className="tname">{tool.name}</span>
                         <span className="ttag">{tool.tag}</span>
@@ -78,6 +85,18 @@ export default function StackPage() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      <section className="nudge">
+        <div className="wrap inner">
+          <p className="big" data-reveal>
+            Want to work together? <Link href="/contact">Let&rsquo;s talk →</Link>
+          </p>
+          <Link className="btn btn--primary" data-reveal href="/contact">
+            Contact
+            <IconArrowRight />
+          </Link>
         </div>
       </section>
     </main>

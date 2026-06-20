@@ -39,12 +39,20 @@ const experience = [
     desc: "Managed CRM analytics and growth initiatives for rapid commerce, optimizing retention and LTV.",
   },
   {
+    year: "2023",
+    domain: "enuygun.com",
+    role: "Experienced Lifecycle Marketing Specialist (Growth)",
+    company: "Wingie Enuygun Group",
+    period: "Jan 2023 – Aug 2023",
+    desc: "Owned lifecycle and CRM programs end-to-end across the group's travel brands.",
+  },
+  {
     year: "2021",
     domain: "enuygun.com",
     role: "Lifecycle Marketing Specialist (Growth)",
     company: "Wingie Enuygun Group",
-    period: "Sep 2021 – Aug 2023",
-    desc: "Built and executed lifecycle marketing programs for a leading online travel platform.",
+    period: "Sep 2021 – Jan 2023",
+    desc: "Built and ran lifecycle marketing programs for a leading online travel platform.",
   },
   {
     year: "2020",

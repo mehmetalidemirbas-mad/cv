@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import { IconSearch } from "./icons";
 
 export default function MobileTopbar() {
   return (
@@ -18,9 +17,6 @@ export default function MobileTopbar() {
           <span className="sb-role">Growth Marketer</span>
         </span>
       </Link>
-      <button className="mtop-search" type="button" aria-label="Search">
-        <IconSearch />
-      </button>
     </header>
   );
 }

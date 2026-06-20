@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { IconExternal, IconInstagram, IconLinkedIn, IconMail } from "../_components/icons";
+import { IconArrowRight, IconExternal, IconInstagram, IconLinkedIn, IconMail } from "../_components/icons";
 import { socials } from "../_components/nav-items";
 
 export const metadata: Metadata = {
@@ -59,6 +59,18 @@ export default function ContactPage() {
               </span>
             </a>
           </div>
+        </div>
+      </section>
+
+      <section className="nudge">
+        <div className="wrap inner">
+          <p className="big" data-reveal>
+            Prefer email? <a href={`mailto:${socials.email}`}>Write to me →</a>
+          </p>
+          <a className="btn btn--primary" data-reveal href={`mailto:${socials.email}`}>
+            Email me
+            <IconArrowRight />
+          </a>
         </div>
       </section>
     </main>
