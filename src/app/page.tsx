@@ -1,65 +1,150 @@
-import Image from "next/image";
+import Link from "next/link";
+import { IconArrowRight, IconLinkedIn } from "./_components/icons";
+import { socials } from "./_components/nav-items";
+
+const expertise = ["GA4", "GTM", "Adjust", "CRO", "SEO", "Paid Media", "Looker Studio"];
+
+const posts = [
+  {
+    cat: "Analytics",
+    title: "GTM Ownership Modeli",
+    body: "Who owns the tag layer? A RACI for Google Tag Manager so tracking doesn't rot the moment a team reorganizes.",
+    date: "May 2026 · Carousel",
+  },
+  {
+    cat: "CRO",
+    title: "Cart Abandonment CRM Flows",
+    body: "The trigger logic, timing and copy behind abandoned-cart flows that recover revenue without nagging the customer.",
+    date: "Apr 2026 · Carousel",
+  },
+  {
+    cat: "Mobile Growth",
+    title: "Adjust MMP Kurulum Rehberi",
+    body: "A step-by-step Adjust setup: SDK, events, attribution windows and the SKAdNetwork gotchas nobody warns you about.",
+    date: "Apr 2026 · Carousel",
+  },
+];
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
+    <main id="top">
+      <header className="hero">
+        <div className="hero-grid" />
+        <div className="wrap hero-inner">
+          <h1 data-reveal>
+            Hi, This is Ali Demirbaş.
+            <span className="cursor" aria-hidden="true" />
           </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+          <p className="sub" data-reveal>
+            Discover my vision as a Growth Marketer with expertise in{" "}
+            <b>scaling digital products and establishing data-driven growth strategies.</b>
           </p>
+          <div className="hero-cta" data-reveal>
+            <Link className="btn btn--primary" href="/about">
+              About
+              <IconArrowRight />
+            </Link>
+            <a
+              className="btn btn--ghost btn--icon"
+              href={socials.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+            >
+              <IconLinkedIn />
+            </a>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </header>
+
+      <section className="block" id="about">
+        <div className="wrap">
+          <div className="about-grid">
+            <div className="about-bio" data-reveal>
+              <span className="eyebrow">
+                <span className="num">01</span> About
+              </span>
+              <p style={{ marginTop: 24 }}>
+                I build the measurement layer behind growth — clean GA4/GTM pipelines, Adjust MMP
+                setup, and CRO programs that turn traffic into revenue. I treat marketing as an
+                engineering problem: instrument first, optimize on evidence, ship.
+              </p>
+            </div>
+            <div className="about-tags" data-reveal>
+              <span className="tags-label">Areas of expertise</span>
+              <div className="pills">
+                {expertise.map((tag) => (
+                  <span className="pill" key={tag}>
+                    <span className="d" />
+                    {tag}
+                  </span>
+                ))}
+              </div>
+              <div className="foot-link" style={{ marginTop: 14 }}>
+                <Link className="link-more" href="/about">
+                  More about me
+                  <IconArrowRight />
+                </Link>
+              </div>
+            </div>
+          </div>
         </div>
-      </main>
-    </div>
+      </section>
+
+      <section className="block" id="content">
+        <div className="wrap">
+          <div className="sec-head" data-reveal>
+            <div>
+              <span className="eyebrow">
+                <span className="num">02</span> Content
+              </span>
+              <h2>Content</h2>
+            </div>
+            <p className="sec-lede">
+              Growth, CRO and analytics frameworks — unpacked one idea at a time on LinkedIn.
+            </p>
+          </div>
+          <div className="cards">
+            {posts.map((post, i) => (
+              <article className="card" data-reveal style={{ transitionDelay: `${i * 0.08}s` }} key={post.title}>
+                <span className="cat">{post.cat}</span>
+                <h3>{post.title}</h3>
+                <p>{post.body}</p>
+                <span className="date">{post.date}</span>
+              </article>
+            ))}
+          </div>
+          <div className="foot-link">
+            <Link className="link-more" href="/content">
+              See all content
+              <IconArrowRight />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      <section className="contact-section" id="contact">
+        <div className="contact-grid-bg" />
+        <div className="wrap inner">
+          <span className="eyebrow" data-reveal>
+            <span className="num">03</span> Contact
+          </span>
+          <h2 data-reveal>Let&rsquo;s connect.</h2>
+          <p data-reveal>
+            Open to growth &amp; analytics consulting, measurement audits, and CRO programs. The
+            fastest way to reach me is email.
+          </p>
+          <div className="contact-cta" data-reveal>
+            <a className="btn btn--primary" href={`mailto:${socials.email}`}>
+              {socials.email}
+            </a>
+            <a className="btn btn--ghost" href={socials.linkedin} target="_blank" rel="noopener noreferrer">
+              <IconLinkedIn />
+              LinkedIn
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
   );
 }
