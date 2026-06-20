@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { sidebarGroups, socials } from "./nav-items";
-import { IconExternal, IconInstagram, IconLinkedIn, IconSearch } from "./icons";
+import { IconExternal, IconInstagram, IconLinkedIn } from "./icons";
 
 export default function Sidebar() {
   const pathname = usePathname();
@@ -76,12 +76,6 @@ export default function Sidebar() {
           </div>
         ))}
       </nav>
-
-      <div className="sb-search" aria-hidden="true">
-        <IconSearch />
-        <span>Search…</span>
-        <span className="sb-kbd">S</span>
-      </div>
     </aside>
   );
 }
