@@ -29,15 +29,20 @@ export default function Home() {
   return (
     <main id="top">
       <header className="hero">
-        <div className="hero-grid" />
         <div className="wrap hero-inner">
+          <span className="eyebrow-dash" data-reveal>
+            <span className="dash" />
+            Growth Marketer · Istanbul
+          </span>
           <h1 data-reveal>
-            Hi, This is Ali Demirbaş.
+            Hi, this is
+            <br />
+            Ali Demirbaş.
             <span className="cursor" aria-hidden="true" />
           </h1>
           <p className="sub" data-reveal>
             Discover my vision as a Growth Marketer with expertise in{" "}
-            <b>scaling digital products and establishing data-driven growth strategies.</b>
+            <b>scaling digital products and building data-driven growth strategies.</b>
           </p>
           <div className="hero-cta" data-reveal>
             <Link className="btn btn--primary" href="/about">
@@ -45,7 +50,7 @@ export default function Home() {
               <IconArrowRight />
             </Link>
             <a
-              className="btn btn--ghost btn--icon"
+              className="btn btn--dark btn--icon"
               href={socials.linkedin}
               target="_blank"
               rel="noopener noreferrer"
@@ -98,7 +103,7 @@ export default function Home() {
               <span className="eyebrow">
                 <span className="num">02</span> Content
               </span>
-              <h2>Content</h2>
+              <h2>Latest content</h2>
             </div>
             <p className="sec-lede">
               Growth, CRO and analytics frameworks — unpacked one idea at a time on LinkedIn.
@@ -123,25 +128,26 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="contact-section" id="contact">
-        <div className="contact-grid-bg" />
-        <div className="wrap inner">
-          <span className="eyebrow" data-reveal>
-            <span className="num">03</span> Contact
-          </span>
-          <h2 data-reveal>Let&rsquo;s connect.</h2>
-          <p data-reveal>
-            Open to growth &amp; analytics consulting, measurement audits, and CRO programs. The
-            fastest way to reach me is email.
-          </p>
-          <div className="contact-cta" data-reveal>
-            <a className="btn btn--primary" href={`mailto:${socials.email}`}>
-              {socials.email}
-            </a>
-            <a className="btn btn--ghost" href={socials.linkedin} target="_blank" rel="noopener noreferrer">
-              <IconLinkedIn />
-              LinkedIn
-            </a>
+      <section className="contact-wrap">
+        <div className="wrap">
+          <div className="contact-card" id="contact">
+            <span className="eyebrow" data-reveal>
+              <span className="num">03</span> Contact
+            </span>
+            <h2 data-reveal>Let&rsquo;s connect.</h2>
+            <p data-reveal>
+              Open to growth &amp; analytics consulting, measurement audits, and CRO programs. The
+              fastest way to reach me is email.
+            </p>
+            <div className="contact-cta" data-reveal>
+              <a className="btn btn--primary" href={`mailto:${socials.email}`}>
+                {socials.email}
+              </a>
+              <a className="btn btn--dark" href={socials.linkedin} target="_blank" rel="noopener noreferrer">
+                <IconLinkedIn />
+                LinkedIn
+              </a>
+            </div>
           </div>
         </div>
       </section>

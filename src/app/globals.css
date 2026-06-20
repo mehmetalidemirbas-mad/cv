@@ -18,7 +18,7 @@
   --accent-ink: #c2410c;
   --radius: 14px;
   --sidebar-w: 264px;
-  --wrap: 880px;
+  --wrap: 940px;
 }
 
 * {
@@ -34,7 +34,7 @@ body {
   margin: 0;
   background: var(--bg);
   color: var(--fg);
-  font-family: var(--font-inter), ui-sans-serif, system-ui, -apple-system,
+  font-family: var(--font-sans), ui-sans-serif, system-ui, -apple-system,
     "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
@@ -450,6 +450,16 @@ main {
   background: var(--surface-2);
 }
 
+.btn--dark {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.16);
+  color: #fff;
+}
+
+.btn--dark:hover {
+  background: rgba(255, 255, 255, 0.14);
+}
+
 .btn--icon {
   width: 46px;
   padding: 0;
@@ -464,19 +474,36 @@ main {
 /* ------------------------------------------------------------------ hero -- */
 
 .hero {
-  padding: 76px 0 4px;
-}
-
-.hero-grid {
-  display: none;
+  background: #0b0b0c;
+  color: #fff;
+  padding: 60px 0 72px;
 }
 
 .hero-inner {
-  max-width: 760px;
+  max-width: 720px;
+}
+
+.eyebrow-dash {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.eyebrow-dash .dash {
+  width: 28px;
+  height: 1.5px;
+  background: var(--accent);
 }
 
 .hero h1 {
-  font-size: clamp(40px, 7vw, 72px);
+  color: #fff;
+  margin-top: 22px;
+  font-size: clamp(38px, 6vw, 64px);
 }
 
 .cursor {
@@ -497,13 +524,13 @@ main {
 
 .sub {
   margin-top: 22px;
-  max-width: 560px;
-  font-size: clamp(17px, 2.4vw, 20px);
-  color: var(--muted);
+  max-width: 540px;
+  font-size: clamp(16px, 2.2vw, 19px);
+  color: #b6b6bb;
 }
 
 .sub b {
-  color: var(--fg);
+  color: #fff;
   font-weight: 600;
 }
 
@@ -517,8 +544,12 @@ main {
 /* --------------------------------------------------------------- blocks --- */
 
 .block {
-  padding: 54px 0;
+  padding: 52px 0;
   border-top: 1px solid var(--line);
+}
+
+#about.block {
+  border-top: none;
 }
 
 .eyebrow {
@@ -547,7 +578,7 @@ main {
 }
 
 .about-bio p {
-  font-size: clamp(19px, 2.6vw, 23px);
+  font-size: clamp(18px, 2.4vw, 22px);
   line-height: 1.5;
   color: var(--fg);
   font-weight: 450;
@@ -619,7 +650,7 @@ main {
 }
 
 .sec-head h2 {
-  font-size: clamp(26px, 4vw, 34px);
+  font-size: clamp(24px, 3.6vw, 31px);
   margin-top: 12px;
 }
 
@@ -683,27 +714,32 @@ main {
 
 /* home — contact (03) */
 
-.contact-section {
-  position: relative;
-  border-top: 1px solid var(--line);
-  padding: 64px 0;
-  overflow: hidden;
+.contact-wrap {
+  padding: 28px 0 12px;
 }
 
-.contact-grid-bg {
-  display: none;
+.contact-card {
+  background: #0b0b0c;
+  color: #fff;
+  border-radius: 26px;
+  padding: 52px 48px;
 }
 
-.contact-section h2 {
-  font-size: clamp(30px, 5vw, 44px);
+.contact-card .eyebrow .num {
+  color: #8a8a90;
+}
+
+.contact-card h2 {
+  color: #fff;
+  font-size: clamp(28px, 4.4vw, 40px);
   margin-top: 14px;
 }
 
-.contact-section p {
+.contact-card p {
   margin-top: 14px;
-  color: var(--muted);
+  color: #b6b6bb;
   font-size: 16px;
-  max-width: 620px;
+  max-width: 560px;
 }
 
 .contact-cta {
@@ -721,7 +757,8 @@ main {
 }
 
 .page-head h1 {
-  font-size: clamp(38px, 6vw, 62px);
+  margin-top: 16px;
+  font-size: clamp(36px, 5.4vw, 56px);
 }
 
 .ph-sub {
@@ -750,7 +787,7 @@ main {
 }
 
 .about-prose .lead {
-  font-size: clamp(20px, 3vw, 26px);
+  font-size: clamp(19px, 2.8vw, 24px);
   line-height: 1.45;
   color: var(--fg);
   font-weight: 500;
@@ -1067,5 +1104,10 @@ main {
 
   .exp-year {
     display: none;
+  }
+
+  .contact-card {
+    padding: 36px 24px;
+    border-radius: 22px;
   }
 }
