@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import ContactCard from "../_components/ContactCard";
 import { IconExternal } from "../_components/icons";
 import { socials } from "../_components/nav-items";
 
@@ -64,6 +65,8 @@ export default function ContentPage() {
           </div>
         </div>
       </section>
+
+      <ContactCard />
     </main>
   );
 }

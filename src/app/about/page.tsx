@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import Link from "next/link";
 import BrandIcon from "../_components/BrandIcon";
-import { IconArrowRight } from "../_components/icons";
+import ContactCard from "../_components/ContactCard";
 
 export const metadata: Metadata = {
   title: "About",
@@ -13,8 +12,20 @@ export const metadata: Metadata = {
 const logoSrc = (domain: string) =>
   `https://www.google.com/s2/favicons?domain=${domain}&sz=128`;
 
-const experience = [
+type Role = { role: string; period: string; desc: string };
+type SingleExp = { kind: "single"; year: string; domain: string; company: string } & Role;
+type GroupExp = {
+  kind: "group";
+  year: string;
+  domain: string;
+  company: string;
+  span: string;
+  roles: Role[];
+};
+
+const experience: (SingleExp | GroupExp)[] = [
   {
+    kind: "single",
     year: "2026",
     domain: "aksigorta.com.tr",
     role: "Mobile App Growth Lead",
@@ -23,6 +34,7 @@ const experience = [
     desc: "Leading mobile app growth strategy, driving user acquisition and engagement for one of Turkey's largest insurers.",
   },
   {
+    kind: "single",
     year: "2024",
     domain: "vodafone.com.tr",
     role: "Growth Marketing Lead",
@@ -31,6 +43,7 @@ const experience = [
     desc: "Led growth marketing across digital channels, combining data-driven acquisition with lifecycle programs.",
   },
   {
+    kind: "single",
     year: "2023",
     domain: "getir.com",
     role: "Growth – CRM Analytics Executive",
@@ -39,22 +52,26 @@ const experience = [
     desc: "Managed CRM analytics and growth initiatives for rapid commerce, optimizing retention and LTV.",
   },
   {
-    year: "2023",
-    domain: "enuygun.com",
-    role: "Experienced Lifecycle Marketing Specialist (Growth)",
-    company: "Wingie Enuygun Group",
-    period: "Jan 2023 – Aug 2023",
-    desc: "Owned lifecycle and CRM programs end-to-end across the group's travel brands.",
-  },
-  {
+    kind: "group",
     year: "2021",
     domain: "enuygun.com",
-    role: "Lifecycle Marketing Specialist (Growth)",
     company: "Wingie Enuygun Group",
-    period: "Sep 2021 – Jan 2023",
-    desc: "Built and ran lifecycle marketing programs for a leading online travel platform.",
+    span: "Full-time · 2 yrs",
+    roles: [
+      {
+        role: "Experienced Lifecycle Marketing Specialist (Growth)",
+        period: "Jan 2023 – Aug 2023",
+        desc: "Owned lifecycle and CRM programs end-to-end across the group's travel brands.",
+      },
+      {
+        role: "Lifecycle Marketing Specialist (Growth)",
+        period: "Sep 2021 – Jan 2023",
+        desc: "Built and ran lifecycle marketing programs for a leading online travel platform.",
+      },
+    ],
   },
   {
+    kind: "single",
     year: "2020",
     domain: "albayrak.com.tr",
     role: "Digital Marketing Specialist",
@@ -63,6 +80,7 @@ const experience = [
     desc: "Managed digital marketing campaigns across group companies.",
   },
   {
+    kind: "single",
     year: "2019",
     domain: "dogusoto.com.tr",
     role: "Jr. Digital Marketing Specialist",
@@ -121,33 +139,43 @@ export default function AboutPage() {
           </h2>
           <div className="exp-divider" />
           <div className="exp-list">
-            {experience.map((item, i) => (
-              <div className="exp-item" data-reveal style={{ transitionDelay: `${i * 0.06}s` }} key={item.company + item.year}>
-                <span className="exp-year">{item.year}</span>
-                <BrandIcon name={item.company} src={logoSrc(item.domain)} />
-                <div className="exp-info">
-                  <span className="exp-role">{item.role}</span>
-                  <span className="exp-company">{item.company}</span>
-                  <span className="exp-period">{item.period}</span>
-                  <p className="exp-desc">{item.desc}</p>
+            {experience.map((item, i) =>
+              item.kind === "group" ? (
+                <div className="exp-item exp-group" data-reveal style={{ transitionDelay: `${i * 0.06}s` }} key={item.company}>
+                  <span className="exp-year">{item.year}</span>
+                  <BrandIcon name={item.company} src={logoSrc(item.domain)} />
+                  <div className="exp-info">
+                    <span className="exp-company-h">{item.company}</span>
+                    <span className="exp-period">{item.span}</span>
+                    <div className="exp-roles">
+                      {item.roles.map((r) => (
+                        <div className="exp-role-item" key={r.role}>
+                          <span className="exp-role">{r.role}</span>
+                          <span className="exp-period">{r.period}</span>
+                          <p className="exp-desc">{r.desc}</p>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
                 </div>
-              </div>
-            ))}
+              ) : (
+                <div className="exp-item" data-reveal style={{ transitionDelay: `${i * 0.06}s` }} key={item.company + item.year}>
+                  <span className="exp-year">{item.year}</span>
+                  <BrandIcon name={item.company} src={logoSrc(item.domain)} />
+                  <div className="exp-info">
+                    <span className="exp-role">{item.role}</span>
+                    <span className="exp-company">{item.company}</span>
+                    <span className="exp-period">{item.period}</span>
+                    <p className="exp-desc">{item.desc}</p>
+                  </div>
+                </div>
+              )
+            )}
           </div>
         </div>
       </section>
 
-      <section className="nudge">
-        <div className="wrap inner">
-          <p className="big" data-reveal>
-            Want to work together? <Link href="/contact">Let&rsquo;s talk →</Link>
-          </p>
-          <Link className="btn btn--primary" data-reveal href="/contact">
-            Contact
-            <IconArrowRight />
-          </Link>
-        </div>
-      </section>
+      <ContactCard />
     </main>
   );
 }
