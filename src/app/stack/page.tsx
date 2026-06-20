@@ -16,34 +16,77 @@ const groups = [
   {
     title: "Design & Build",
     tools: [
-      { name: "N8N", domain: "n8n.io", tag: "Automation" },
-      { name: "ChatGPT", domain: "openai.com", tag: "OpenAI" },
-      { name: "Framer", domain: "framer.com", tag: "Web Design Platform" },
-      { name: "Lovable", domain: "lovable.dev", tag: "AI Code Editor" },
       { name: "Figma", domain: "figma.com", tag: "Design Tool" },
+      { name: "Framer", domain: "framer.com", tag: "Web Design Platform" },
+      { name: "ChatGPT", domain: "openai.com", tag: "OpenAI" },
+      { name: "Canva", domain: "canva.com", tag: "Design & Graphics" },
+      { name: "Claude", domain: "claude.ai", tag: "Anthropic AI" },
+      { name: "Midjourney", domain: "midjourney.com", tag: "AI Image Generation" },
     ],
   },
   {
-    title: "Data & Analytics",
+    title: "Web & Product Analytics",
     tools: [
       { name: "Mixpanel", domain: "mixpanel.com", tag: "Product Analytics" },
-      { name: "Looker Studio", domain: "lookerstudio.google.com", tag: "Data Visualisation" },
+      { name: "Hotjar", domain: "hotjar.com", tag: "Heatmaps & Recordings" },
+      { name: "Microsoft Clarity", domain: "clarity.microsoft.com", tag: "Behavior Analytics" },
+      { name: "GA4", domain: "analytics.google.com", tag: "Web Analytics" },
+      { name: "Google Tag Manager", domain: "tagmanager.google.com", tag: "Tag Management" },
+      { name: "Smartlook", domain: "smartlook.com", tag: "Session Analytics" },
+    ],
+  },
+  {
+    title: "Mobile / Attribution (MMP)",
+    tools: [
       { name: "Adjust", domain: "adjust.com", tag: "Mobile App Analytics" },
+      { name: "AppsFlyer", domain: "appsflyer.com", tag: "Mobile Attribution" },
+      { name: "Firebase", domain: "firebase.google.com", tag: "App Platform & Analytics" },
+      { name: "RevenueCat", domain: "revenuecat.com", tag: "In-App Subscriptions" },
+    ],
+  },
+  {
+    title: "BI / Data Visualization",
+    tools: [
+      { name: "Looker Studio", domain: "lookerstudio.google.com", tag: "Data Visualisation" },
+      { name: "Tableau", domain: "tableau.com", tag: "Data Visualisation" },
+      { name: "Power BI", domain: "powerbi.microsoft.com", tag: "Business Intelligence" },
+      { name: "Mixpanel", domain: "mixpanel.com", tag: "Product Analytics" },
+      { name: "Qlik", domain: "qlik.com", tag: "Business Intelligence" },
+      { name: "Graylog", domain: "graylog.org", tag: "Log Management" },
+      { name: "Kibana", domain: "elastic.co", tag: "Log & Data Analytics" },
     ],
   },
   {
     title: "CRM & Engagement",
     tools: [
-      { name: "Intercom", domain: "intercom.com", tag: "The complete customer service platform" },
-      { name: "Hubspot", domain: "hubspot.com", tag: "Customer Relations Platform" },
       { name: "Insider", domain: "useinsider.com", tag: "Omnichannel Marketing" },
+      { name: "Braze", domain: "braze.com", tag: "Customer Engagement" },
+      { name: "Mailchimp", domain: "mailchimp.com", tag: "Email Marketing" },
+      { name: "OneSignal", domain: "onesignal.com", tag: "Push Notifications" },
+      { name: "D·engage", domain: "dengage.com", tag: "Marketing Automation" },
+    ],
+  },
+  {
+    title: "SEO & Content",
+    tools: [
+      { name: "Ahrefs", domain: "ahrefs.com", tag: "SEO Toolset" },
+      { name: "Semrush", domain: "semrush.com", tag: "SEO & Marketing" },
+      { name: "Screaming Frog", domain: "screamingfrog.co.uk", tag: "SEO Crawler" },
+      { name: "Search Console", domain: "search.google.com", tag: "Search Analytics" },
+    ],
+  },
+  {
+    title: "CRO / A-B Test / Experimentation",
+    tools: [
+      { name: "Insider", domain: "useinsider.com", tag: "Web Personalization & A/B" },
     ],
   },
   {
     title: "Work Management",
     tools: [
+      { name: "Jira", domain: "atlassian.com", tag: "Project Management" },
       { name: "Notion", domain: "notion.so", tag: "Work Management Tool" },
-      { name: "Arc", domain: "arc.net", tag: "Browser" },
+      { name: "Trello", domain: "trello.com", tag: "Task Boards" },
     ],
   },
 ];
