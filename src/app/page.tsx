@@ -35,8 +35,8 @@ export default function Home() {
             Ali Demirbaş.
           </h1>
           <p className="sub" data-reveal>
-            Discover my vision as a Growth Marketer with expertise in{" "}
-            <b>scaling digital products and building data-driven growth strategies.</b>
+            <b>Performance &amp; Growth Strategist.</b> Partner with an expert focused on driving
+            product scale through data-driven precision and engineered marketing.
           </p>
           <div className="hero-cta" data-reveal>
             <Link className="btn btn--primary" href="/about">
@@ -61,9 +61,11 @@ export default function Home() {
           <div className="about-bio" data-reveal>
             <span className="eyebrow">About</span>
             <p style={{ marginTop: 24 }}>
-              I build the measurement layer behind growth — clean GA4/GTM pipelines, Adjust MMP
-              setup, and CRO programs that turn traffic into revenue. I treat marketing as an
-              engineering problem: instrument first, optimize on evidence, ship.
+              Architecting the core data framework that powers sustainable growth. We engineer
+              precise GA4/GTM pipelines, optimize complex Adjust MMP setups, and execute
+              evidence-based CRO programs to convert traffic into high-value revenue. We approach
+              marketing as an iterative engineering discipline: rigorous instrumentation,
+              data-driven optimization, and methodical execution.
             </p>
             <div className="foot-link" style={{ marginTop: 18 }}>
               <Link className="link-more" href="/about">
