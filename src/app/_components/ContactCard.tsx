@@ -8,7 +8,7 @@ export default function ContactCard() {
       <div className="wrap">
         <div className="contact-card" id="contact">
           <span className="eyebrow" data-reveal>
-            <span className="num">03</span> Contact
+            Contact
           </span>
           <h2 data-reveal>Let&rsquo;s connect.</h2>
           <p data-reveal>
