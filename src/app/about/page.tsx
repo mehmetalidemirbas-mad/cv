@@ -8,10 +8,15 @@ export const metadata: Metadata = {
   title: "About",
 };
 
+// Company logos are pulled from each company's own domain (via Google's favicon
+// service) since most of these brands aren't on Simple Icons.
+const logoSrc = (domain: string) =>
+  `https://www.google.com/s2/favicons?domain=${domain}&sz=128`;
+
 const experience = [
   {
     year: "2026",
-    icon: "aksigorta",
+    domain: "aksigorta.com.tr",
     role: "Mobile App Growth Lead",
     company: "Aksigorta",
     period: "Apr 2026 – Present",
@@ -19,7 +24,7 @@ const experience = [
   },
   {
     year: "2024",
-    icon: "vodafone",
+    domain: "vodafone.com.tr",
     role: "Growth Marketing Lead",
     company: "Vodafone",
     period: "Aug 2024 – Apr 2026",
@@ -27,7 +32,7 @@ const experience = [
   },
   {
     year: "2023",
-    icon: "getir",
+    domain: "getir.com",
     role: "Growth – CRM Analytics Executive",
     company: "Getir",
     period: "Sep 2023 – Aug 2024",
@@ -35,7 +40,7 @@ const experience = [
   },
   {
     year: "2021",
-    icon: "wingie",
+    domain: "enuygun.com",
     role: "Lifecycle Marketing Specialist (Growth)",
     company: "Wingie Enuygun Group",
     period: "Sep 2021 – Aug 2023",
@@ -43,7 +48,7 @@ const experience = [
   },
   {
     year: "2020",
-    icon: "albayrak",
+    domain: "albayrak.com.tr",
     role: "Digital Marketing Specialist",
     company: "Albayrak Grubu",
     period: "Oct 2020 – Aug 2021",
@@ -51,7 +56,7 @@ const experience = [
   },
   {
     year: "2019",
-    icon: "dogusoto",
+    domain: "dogusoto.com.tr",
     role: "Jr. Digital Marketing Specialist",
     company: "Doğuş Oto",
     period: "Sep 2019 – Aug 2020",
@@ -107,7 +112,7 @@ export default function AboutPage() {
             {experience.map((item, i) => (
               <div className="exp-item" data-reveal style={{ transitionDelay: `${i * 0.06}s` }} key={item.company + item.year}>
                 <span className="exp-year">{item.year}</span>
-                <BrandIcon name={item.company} icon={item.icon} />
+                <BrandIcon name={item.company} src={logoSrc(item.domain)} />
                 <div className="exp-info">
                   <span className="exp-role">{item.role}</span>
                   <span className="exp-company">{item.company}</span>
