@@ -11,10 +11,6 @@ export default function ContactPage() {
     <main id="top">
       <header className="page-head">
         <div className="wrap inner">
-          <span className="eyebrow-dash" data-reveal>
-            <span className="dash" />
-            Contact
-          </span>
           <h1 data-reveal>Let&rsquo;s talk.</h1>
           <p className="ph-sub" data-reveal>
             I&rsquo;m always open to interesting conversations about{" "}
