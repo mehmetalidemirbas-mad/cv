@@ -95,9 +95,9 @@ export default function AboutPage() {
     <main id="top">
       <header className="page-head">
         <div className="wrap inner">
-          <h1 data-reveal>About me.</h1>
+          <h1 data-reveal>Professional Overview</h1>
           <p className="ph-sub" data-reveal>
-            Growth marketer. Data person. Builder.
+            Growth Strategy. Data Architecture. Product Scaling.
           </p>
         </div>
       </header>
@@ -106,14 +106,16 @@ export default function AboutPage() {
         <div className="wrap bio-wrap">
           <div className="about-prose" data-reveal>
             <p className="lead">
-              I&rsquo;m Ali Demirbaş — a growth marketer based in Istanbul, eight years deep in the
-              part of marketing most people skip: the measurement layer.
+              Based in Istanbul, I am a Growth Strategist bringing over eight years of specialized
+              experience to the most critical foundation of digital success: the measurement layer.
             </p>
             <p>
-              My work sits where analytics, acquisition and product meet. I build GA4 / GTM
-              infrastructure that&rsquo;s actually trustworthy, set up mobile measurement with
-              Adjust, run CRO programs, and manage paid media and SEO — then tie all of it back to
-              revenue, not vanity metrics.
+              My expertise lies at the intersection of advanced analytics, user acquisition, and
+              product strategy. I architect highly reliable GA4 and GTM infrastructures, implement
+              precise mobile measurement protocols utilizing Adjust, and execute data-driven CRO
+              programs. By integrating comprehensive paid media and SEO management, I ensure all
+              marketing initiatives are strictly tethered to bottom-line revenue rather than
+              superficial vanity metrics.
             </p>
           </div>
           <div className="about-photo" data-reveal>
