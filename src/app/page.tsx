@@ -35,8 +35,8 @@ export default function Home() {
             Ali Demirbaş.
           </h1>
           <p className="sub" data-reveal>
-            <b>Performance &amp; Growth Strategist.</b> Partner with an expert focused on driving
-            product scale through data-driven precision and engineered marketing.
+            <b>Performance &amp; Growth Strategist.</b> I drive product scale through data-driven
+            precision and engineered marketing.
           </p>
           <div className="hero-cta" data-reveal>
             <Link className="btn btn--primary" href="/about">
@@ -61,9 +61,9 @@ export default function Home() {
           <div className="about-bio" data-reveal>
             <span className="eyebrow">About</span>
             <p style={{ marginTop: 24 }}>
-              Architecting the core data framework that powers sustainable growth. We engineer
-              precise GA4/GTM pipelines, optimize complex Adjust MMP setups, and execute
-              evidence-based CRO programs to convert traffic into high-value revenue. We approach
+              I architect the core data framework that powers sustainable growth — engineering
+              precise GA4/GTM pipelines, optimizing complex Adjust MMP setups, and executing
+              evidence-based CRO programs to convert traffic into high-value revenue. I approach
               marketing as an iterative engineering discipline: rigorous instrumentation,
               data-driven optimization, and methodical execution.
             </p>
