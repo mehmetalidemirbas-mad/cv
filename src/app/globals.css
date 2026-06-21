@@ -682,6 +682,15 @@ main {
   margin-top: 12px;
 }
 
+.sec-head--stacked {
+  display: block;
+}
+
+.sec-head--stacked .sec-lede {
+  margin-top: 12px;
+  max-width: 520px;
+}
+
 .sec-lede {
   max-width: 360px;
   color: var(--muted);

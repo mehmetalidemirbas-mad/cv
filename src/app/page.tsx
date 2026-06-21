@@ -15,14 +15,10 @@ const stackPreview = [
   { name: "GA4", domain: "analytics.google.com", tag: "Web Analytics" },
   { name: "Google Tag Manager", domain: "tagmanager.google.com", tag: "Tag Management" },
   { name: "Adjust", domain: "adjust.com", tag: "Mobile Attribution" },
-  { name: "AppsFlyer", domain: "appsflyer.com", tag: "Mobile Attribution" },
   { name: "Mixpanel", domain: "mixpanel.com", tag: "Product Analytics" },
   { name: "Looker Studio", domain: "lookerstudio.google.com", tag: "Data Visualisation" },
   { name: "Insider", domain: "useinsider.com", tag: "Omnichannel Marketing" },
   { name: "Braze", domain: "braze.com", tag: "Customer Engagement" },
-  { name: "Hotjar", domain: "hotjar.com", tag: "Heatmaps & Recordings" },
-  { name: "Semrush", domain: "semrush.com", tag: "SEO & Marketing" },
-  { name: "Notion", domain: "notion.so", tag: "Work Management" },
 ];
 
 export default function Home() {
@@ -32,17 +28,17 @@ export default function Home() {
         <div className="wrap">
           <div className="hero-card">
             <h1 data-reveal>
-              Hi, this is
+              Hi, I&apos;m
               <br />
               Ali Demirbaş.
             </h1>
             <p className="sub" data-reveal>
-              <b>Performance &amp; Growth Strategist.</b> I drive product scale through data-driven
-              precision and engineered marketing.
+              <b>Performance &amp; Growth Strategist.</b> I help digital products scale through
+              analytics, experimentation, and performance marketing.
             </p>
             <div className="hero-cta" data-reveal>
               <Link className="btn btn--primary" href="/about">
-                About
+                Explore my experience
                 <IconArrowRight />
               </Link>
               <a
@@ -64,11 +60,11 @@ export default function Home() {
           <div className="about-bio" data-reveal>
             <span className="eyebrow">About</span>
             <p style={{ marginTop: 24 }}>
-              I architect the core data framework that powers sustainable growth. I engineer
-              precise GA4/GTM pipelines, optimize complex Adjust MMP setups, and run
-              evidence-based CRO programs that convert traffic into high-value revenue. I treat
-              marketing as an iterative engineering discipline built on rigorous instrumentation,
-              data-driven optimization, and methodical execution.
+              I build reliable measurement frameworks that help digital products grow sustainably.
+              My work includes implementing GA4 and GTM tracking systems, optimizing Adjust MMP
+              setups, and designing evidence-based CRO programs that turn user insights into
+              measurable business growth. I approach marketing as an iterative process built on
+              accurate data, structured experimentation, and continuous optimization.
             </p>
             <div className="foot-link" style={{ marginTop: 18 }}>
               <Link className="link-more" href="/about">
@@ -103,11 +99,9 @@ export default function Home() {
 
       <section className="block" id="stack">
         <div className="wrap">
-          <div className="sec-head" data-reveal>
-            <div>
-              <span className="eyebrow">Stack</span>
-              <h2>Tools I work with</h2>
-            </div>
+          <div className="sec-head sec-head--stacked" data-reveal>
+            <span className="eyebrow">Stack</span>
+            <h2>Tools I work with</h2>
             <p className="sec-lede">
               The software I instrument, query and optimize growth with every day.
             </p>
