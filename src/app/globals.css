@@ -919,11 +919,11 @@ main {
 }
 
 .about-photo img {
-  width: 100%;
-  max-width: 240px;
-  aspect-ratio: 1 / 1;
-  border-radius: 20px;
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
   object-fit: cover;
+  object-position: center;
   border: 1px solid var(--line);
 }
 
@@ -1236,10 +1236,6 @@ main {
   .bio-wrap {
     grid-template-columns: 1fr;
     gap: 28px;
-  }
-
-  .about-photo img {
-    max-width: 320px;
   }
 
   .sec-head {
