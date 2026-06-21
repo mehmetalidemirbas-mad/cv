@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import ContactCard from "../_components/ContactCard";
+import LinkedInFeed from "../_components/LinkedInFeed";
 import { IconExternal } from "../_components/icons";
 import { socials } from "../_components/nav-items";
 
@@ -8,25 +9,40 @@ export const metadata: Metadata = {
   description: "Growth, CRO and analytics frameworks — unpacked one idea at a time on LinkedIn.",
 };
 
-const posts = [
-  {
-    cat: "Analytics",
-    title: "GTM Ownership Modeli",
-    body: "Who owns the tag layer? A RACI for Google Tag Manager so tracking doesn't rot the moment a team reorganizes.",
-    date: "May 2026 · Carousel",
-  },
-  {
-    cat: "CRO",
-    title: "Cart Abandonment CRM Flows",
-    body: "The trigger logic, timing and copy behind abandoned-cart flows that recover revenue without nagging the customer.",
-    date: "Apr 2026 · Carousel",
-  },
-  {
-    cat: "Mobile Growth",
-    title: "Adjust MMP Kurulum Rehberi",
-    body: "A step-by-step Adjust setup: SDK, events, attribution windows and the SKAdNetwork gotchas nobody warns you about.",
-    date: "Apr 2026 · Carousel",
-  },
+// LinkedIn post activity ids, newest first.
+const postIds = [
+  "7470079770823901185",
+  "7467539714124906498",
+  "7462119181740617728",
+  "7457125720335556609",
+  "7450441561085132801",
+  "7448339752757702656",
+  "7444258376672354304",
+  "7442933404221796353",
+  "7434669739295232002",
+  "7430505676927340544",
+  "7427585109551345664",
+  "7426172976875868161",
+  "7424319546389389312",
+  "7417875248949362688",
+  "7417868460937859072",
+  "7416505450659045376",
+  "7414893643796246528",
+  "7412741952833474560",
+  "7411647293143293952",
+  "7409480629760983042",
+  "7403686038243774464",
+  "7398978823242977282",
+  "7390651394313306112",
+  "7386653795734216704",
+  "7385916431923593217",
+  "7382758990344171520",
+  "7381576664243306496",
+  "7379044904024313856",
+  "7377730104652705792",
+  "7377220432132898816",
+  "7376873117358477312",
+  "7375786010242256896",
 ];
 
 export default function ContentPage() {
@@ -41,21 +57,12 @@ export default function ContentPage() {
         </div>
       </header>
 
-      <section className="block" style={{ paddingTop: 48 }}>
+      <section className="block" style={{ paddingTop: 40 }}>
         <div className="wrap">
-          <div className="cards">
-            {posts.map((post, i) => (
-              <article className="card" data-reveal style={{ transitionDelay: `${i * 0.08}s` }} key={post.title}>
-                <span className="cat">{post.cat}</span>
-                <h3>{post.title}</h3>
-                <p>{post.body}</p>
-                <span className="date">{post.date}</span>
-              </article>
-            ))}
-          </div>
-          <div className="foot-link">
+          <LinkedInFeed ids={postIds} />
+          <div className="foot-link" style={{ marginTop: 26 }}>
             <a className="link-more" href={socials.linkedin} target="_blank" rel="noopener noreferrer">
-              Follow on LinkedIn
+              See all on LinkedIn
               <IconExternal />
             </a>
           </div>
