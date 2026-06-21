@@ -2,7 +2,7 @@ import Link from "next/link";
 import BrandIcon from "./_components/BrandIcon";
 import ContactCard from "./_components/ContactCard";
 import LinkedInFeed from "./_components/LinkedInFeed";
-import { IconArrowRight, IconLinkedIn } from "./_components/icons";
+import { IconArrowRight, IconExternal, IconLinkedIn } from "./_components/icons";
 import { postIds } from "./_components/linkedin-posts";
 import { socials } from "./_components/nav-items";
 
@@ -80,19 +80,20 @@ export default function Home() {
         <div className="wrap">
           <div className="sec-head" data-reveal>
             <div>
-              <span className="eyebrow">Content</span>
-              <h2>Latest content</h2>
+              <span className="eyebrow">Insights</span>
+              <h2>Latest posts</h2>
             </div>
             <p className="sec-lede">
-              Growth, CRO and analytics frameworks, unpacked one idea at a time on LinkedIn.
+              Insights, frameworks, and practical lessons on growth, CRO, and analytics, shared on
+              LinkedIn.
             </p>
           </div>
           <LinkedInFeed ids={postIds.slice(0, 6)} />
           <div className="foot-link">
-            <Link className="link-more" href="/content">
-              See all content
-              <IconArrowRight />
-            </Link>
+            <a className="link-more" href={socials.linkedin} target="_blank" rel="noopener noreferrer">
+              See more on LinkedIn
+              <IconExternal />
+            </a>
           </div>
         </div>
       </section>
