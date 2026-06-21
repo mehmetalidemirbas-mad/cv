@@ -17,14 +17,14 @@ export type NavItem = {
 export const primaryNav: NavItem[] = [
   { label: "Home", href: "/", Icon: IconHome },
   { label: "About", href: "/about", Icon: IconAbout },
-  { label: "Content", href: "/content", Icon: IconContent },
+  { label: "Insights", href: "/content", Icon: IconContent },
   { label: "Stack", href: "/stack", Icon: IconStack },
   { label: "Contact", href: "/contact", Icon: IconContact },
 ];
 
 // The desktop sidebar groups the same routes under labelled sections.
 export const sidebarGroups: { label?: string; items: NavItem[] }[] = [
-  { items: primaryNav.slice(0, 3) }, // Home / About / Content
+  { items: primaryNav.slice(0, 3) }, // Home / About / Insights
   { label: "Resources", items: [primaryNav[3]] }, // Stack
   { label: "Connect", items: [primaryNav[4]] }, // Contact
 ];
