@@ -12,7 +12,7 @@ export default function Footer() {
         <nav className="foot-nav" aria-label="Footer">
           <Link href="/about">About</Link>
           <span className="sep">·</span>
-          <Link href="/content">Content</Link>
+          <Link href="/content">Insights</Link>
           <span className="sep">·</span>
           <a href="#top" className="totop">
             Back to top

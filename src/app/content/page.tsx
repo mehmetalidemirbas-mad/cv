@@ -6,8 +6,9 @@ import { postIds } from "../_components/linkedin-posts";
 import { socials } from "../_components/nav-items";
 
 export const metadata: Metadata = {
-  title: "Content",
-  description: "Growth, CRO and analytics frameworks, unpacked one idea at a time on LinkedIn.",
+  title: "Insights",
+  description:
+    "Insights, frameworks, and practical lessons on growth, CRO, and analytics, shared on LinkedIn.",
 };
 
 export default function ContentPage() {
@@ -16,9 +17,10 @@ export default function ContentPage() {
       <header className="page-head">
         <div className="wrap">
           <div className="ph-card">
-            <h1 data-reveal>Content.</h1>
+            <h1 data-reveal>Insights.</h1>
             <p className="ph-sub" data-reveal>
-              Growth, CRO and analytics frameworks, unpacked one idea at a time on LinkedIn.
+              Insights, frameworks, and practical lessons on growth, CRO, and analytics, shared on
+              LinkedIn.
             </p>
           </div>
         </div>
