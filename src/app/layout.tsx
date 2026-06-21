@@ -16,17 +16,17 @@ const description =
   "Growth Marketing strategist with 8+ years of experience. Working at the intersection of data and user behavior.";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://alidemirbas.com"),
+  metadataBase: new URL("https://alidemirbas.com.tr"),
   title: {
     default: "Ali Demirbaş — Growth Marketer",
     template: "%s · Ali Demirbaş",
   },
   description,
-  alternates: { canonical: "https://alidemirbas.com" },
+  alternates: { canonical: "https://alidemirbas.com.tr" },
   openGraph: {
     title: "Ali Demirbaş — Growth Marketer",
     description,
-    url: "https://alidemirbas.com",
+    url: "https://alidemirbas.com.tr",
     siteName: "Ali Demirbaş",
     locale: "en_US",
     type: "website",
