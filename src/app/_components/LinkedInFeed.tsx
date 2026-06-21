@@ -1,38 +1,43 @@
 "use client";
 
-import { useState } from "react";
+import { useRef } from "react";
 
-const INITIAL = 8;
-const STEP = 8;
-
-// Renders official LinkedIn post embeds for the given activity ids, with a
-// "show more" control so we don't mount all iframes up front.
+// Horizontal, swipeable carousel of official LinkedIn post embeds.
 export default function LinkedInFeed({ ids }: { ids: string[] }) {
-  const [count, setCount] = useState(INITIAL);
-  const shown = ids.slice(0, count);
+  const ref = useRef<HTMLDivElement>(null);
+
+  const scroll = (dir: number) => {
+    const el = ref.current;
+    if (el) el.scrollBy({ left: dir * el.clientWidth * 0.9, behavior: "smooth" });
+  };
 
   return (
-    <>
-      <div className="li-feed">
-        {shown.map((id) => (
-          <iframe
-            key={id}
-            className="li-frame"
-            src={`https://www.linkedin.com/embed/feed/update/urn:li:activity:${id}`}
-            title="LinkedIn post"
-            loading="lazy"
-            allowFullScreen
-          />
+    <div className="li-scroller-wrap">
+      <button className="li-nav li-prev" type="button" aria-label="Previous" onClick={() => scroll(-1)}>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round">
+          <path d="M15 6l-6 6 6 6" />
+        </svg>
+      </button>
+
+      <div className="li-scroller" ref={ref}>
+        {ids.map((id) => (
+          <div className="li-card" key={id}>
+            <iframe
+              className="li-frame"
+              src={`https://www.linkedin.com/embed/feed/update/urn:li:activity:${id}`}
+              title="LinkedIn post"
+              loading="lazy"
+              allowFullScreen
+            />
+          </div>
         ))}
       </div>
 
-      {count < ids.length ? (
-        <div className="li-more">
-          <button className="btn btn--ghost" type="button" onClick={() => setCount((c) => c + STEP)}>
-            Show more
-          </button>
-        </div>
-      ) : null}
-    </>
+      <button className="li-nav li-next" type="button" aria-label="Next" onClick={() => scroll(1)}>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round">
+          <path d="M9 6l6 6-6 6" />
+        </svg>
+      </button>
+    </div>
   );
 }

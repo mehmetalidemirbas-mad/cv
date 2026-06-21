@@ -734,11 +734,31 @@ main {
   color: var(--muted-2);
 }
 
-/* LinkedIn embed feed (Content page) */
-.li-feed {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+/* LinkedIn embed carousel (Content page) — horizontal scroll */
+.li-scroller-wrap {
+  position: relative;
+}
+
+.li-scroller {
+  display: flex;
   gap: 16px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  padding: 4px 2px 8px;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.li-scroller::-webkit-scrollbar {
+  display: none;
+}
+
+.li-card {
+  flex: 0 0 auto;
+  width: 480px;
+  max-width: 86vw;
+  scroll-snap-align: start;
 }
 
 .li-frame {
@@ -749,10 +769,45 @@ main {
   background: var(--surface);
 }
 
-.li-more {
-  margin-top: 28px;
-  display: flex;
-  justify-content: center;
+.li-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  border: 1px solid var(--line-strong);
+  background: var(--bg);
+  color: var(--fg);
+  cursor: pointer;
+  box-shadow: 0 8px 22px -10px rgba(0, 0, 0, 0.35);
+  z-index: 2;
+  transition: background 0.15s;
+}
+
+.li-nav:hover {
+  background: var(--surface-2);
+}
+
+.li-nav svg {
+  width: 20px;
+  height: 20px;
+}
+
+.li-prev {
+  left: -12px;
+}
+
+.li-next {
+  right: -12px;
+}
+
+@media (max-width: 700px) {
+  .li-nav {
+    display: none;
+  }
 }
 
 /* home — contact (03) */
