@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 
-const base = "https://alidemirbas.com";
+const base = "https://alidemirbas.com.tr";
 const routes = ["", "/about", "/content", "/stack", "/contact"];
 
 export default function sitemap(): MetadataRoute.Sitemap {
