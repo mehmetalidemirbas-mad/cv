@@ -96,9 +96,9 @@ export default function AboutPage() {
       <header className="page-head">
         <div className="wrap">
           <div className="ph-card">
-            <h1 data-reveal>Professional Overview</h1>
+            <h1 data-reveal>Professional Profile</h1>
             <p className="ph-sub" data-reveal>
-              Growth Strategy. Data Architecture. Product Scaling.
+              Digital Marketing · Analytics · Growth Strategy
             </p>
           </div>
         </div>
@@ -108,16 +108,16 @@ export default function AboutPage() {
         <div className="wrap bio-wrap">
           <div className="about-prose" data-reveal>
             <p className="lead">
-              Based in Istanbul, I am a Growth Strategist bringing over eight years of specialized
-              experience to the most critical foundation of digital success: the measurement layer.
+              With over eight years of experience in digital marketing and growth, I have worked on
+              strategies designed to support the growth objectives of different products and business
+              models.
             </p>
             <p>
-              My expertise lies at the intersection of advanced analytics, user acquisition, and
-              product strategy. I architect highly reliable GA4 and GTM infrastructures, implement
-              precise mobile measurement protocols utilizing Adjust, and execute data-driven CRO
-              programs. By integrating comprehensive paid media and SEO management, I ensure all
-              marketing initiatives are strictly tethered to bottom-line revenue rather than
-              superficial vanity metrics.
+              My experience spans analytics, user acquisition, product, and growth strategy. I use
+              data to evaluate digital marketing performance, understand user behavior, and identify
+              opportunities for growth. Across campaign management, measurement, and optimization, I
+              focus on keeping marketing initiatives aligned with business goals and delivering
+              measurable outcomes.
             </p>
           </div>
           <div className="about-photo" data-reveal>
