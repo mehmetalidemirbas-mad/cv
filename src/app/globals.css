@@ -20,8 +20,8 @@
   --dark: #0f1b34;
   --dark-muted: #aab3c4;
   --radius: 14px;
-  --sidebar-w: 240px;
-  --wrap: 760px;
+  --sidebar-w: 224px;
+  --wrap: 680px;
 }
 
 * {
@@ -37,6 +37,7 @@ body {
   margin: 0;
   background: var(--bg);
   color: var(--fg);
+  font-size: 15px;
   font-family: var(--font-sans), ui-sans-serif, system-ui, -apple-system,
     "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   line-height: 1.6;
@@ -479,7 +480,7 @@ main {
 .hero {
   background: var(--dark);
   color: #fff;
-  padding: 44px 0 48px;
+  padding: 34px 0 38px;
 }
 
 .hero-inner {
@@ -506,7 +507,7 @@ main {
 .hero h1 {
   color: #fff;
   margin-top: 22px;
-  font-size: clamp(25px, 3.6vw, 39px);
+  font-size: clamp(22px, 3vw, 32px);
 }
 
 .cursor {
@@ -543,7 +544,7 @@ main {
 .sub {
   margin-top: 22px;
   max-width: 540px;
-  font-size: clamp(15px, 1.9vw, 17px);
+  font-size: clamp(13px, 1.6vw, 15px);
   color: var(--dark-muted);
 }
 
@@ -562,7 +563,7 @@ main {
 /* --------------------------------------------------------------- blocks --- */
 
 .block {
-  padding: 42px 0;
+  padding: 34px 0;
   border-top: 1px solid var(--line);
 }
 
@@ -600,7 +601,7 @@ main {
 }
 
 .about-bio p {
-  font-size: clamp(15px, 1.8vw, 17px);
+  font-size: clamp(14px, 1.6vw, 16px);
   line-height: 1.5;
   color: var(--fg);
   font-weight: 450;
@@ -672,7 +673,7 @@ main {
 }
 
 .sec-head h2 {
-  font-size: clamp(18px, 2.4vw, 22px);
+  font-size: clamp(16px, 2vw, 19px);
   margin-top: 12px;
 }
 
@@ -757,14 +758,14 @@ main {
 
 .li-card {
   flex: 0 0 auto;
-  width: 420px;
+  width: 380px;
   max-width: 86vw;
   scroll-snap-align: start;
 }
 
 .li-frame {
   width: 100%;
-  height: 540px;
+  height: 470px;
   border: 0;
   border-radius: 12px;
   background: var(--surface);
@@ -830,7 +831,7 @@ main {
 
 .contact-card h2 {
   color: #fff;
-  font-size: clamp(21px, 3vw, 28px);
+  font-size: clamp(18px, 2.4vw, 24px);
   margin-top: 14px;
 }
 
@@ -853,7 +854,7 @@ main {
 .page-head {
   background: var(--dark);
   color: #fff;
-  padding: 42px 0 38px;
+  padding: 32px 0 28px;
 }
 
 .page-head + .block {
@@ -863,14 +864,14 @@ main {
 .page-head h1 {
   color: #fff;
   margin-top: 16px;
-  font-size: clamp(23px, 3.2vw, 33px);
+  font-size: clamp(20px, 2.8vw, 28px);
 }
 
 .ph-sub {
   margin-top: 16px;
   max-width: 560px;
   color: var(--dark-muted);
-  font-size: clamp(15px, 1.9vw, 17px);
+  font-size: clamp(13px, 1.6vw, 15px);
 }
 
 .ph-sub b {
@@ -882,8 +883,8 @@ main {
 
 .bio-wrap {
   display: grid;
-  grid-template-columns: 1fr 280px;
-  gap: 36px;
+  grid-template-columns: 1fr 240px;
+  gap: 32px;
   align-items: start;
 }
 
@@ -892,7 +893,7 @@ main {
 }
 
 .about-prose .lead {
-  font-size: clamp(16px, 2.2vw, 19px);
+  font-size: clamp(15px, 2vw, 17px);
   line-height: 1.45;
   color: var(--fg);
   font-weight: 500;
@@ -910,7 +911,7 @@ main {
 
 .about-photo img {
   width: 100%;
-  max-width: 280px;
+  max-width: 240px;
   aspect-ratio: 1 / 1;
   border-radius: 20px;
   object-fit: cover;
@@ -918,7 +919,7 @@ main {
 }
 
 .exp-title {
-  font-size: clamp(19px, 2.6vw, 24px);
+  font-size: clamp(17px, 2.2vw, 21px);
   margin-top: 8px;
 }
 
