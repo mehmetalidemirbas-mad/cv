@@ -18,13 +18,13 @@ const description =
 export const metadata: Metadata = {
   metadataBase: new URL("https://alidemirbas.com.tr"),
   title: {
-    default: "Ali Demirbaş — Growth Marketer",
+    default: "Ali Demirbaş · Growth Marketer",
     template: "%s · Ali Demirbaş",
   },
   description,
   alternates: { canonical: "https://alidemirbas.com.tr" },
   openGraph: {
-    title: "Ali Demirbaş — Growth Marketer",
+    title: "Ali Demirbaş · Growth Marketer",
     description,
     url: "https://alidemirbas.com.tr",
     siteName: "Ali Demirbaş",
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Ali Demirbaş — Growth Marketer",
+    title: "Ali Demirbaş · Growth Marketer",
     description,
     images: ["/foto.webp"],
   },

@@ -7,7 +7,7 @@ import { socials } from "../_components/nav-items";
 
 export const metadata: Metadata = {
   title: "Content",
-  description: "Growth, CRO and analytics frameworks — unpacked one idea at a time on LinkedIn.",
+  description: "Growth, CRO and analytics frameworks, unpacked one idea at a time on LinkedIn.",
 };
 
 export default function ContentPage() {
@@ -18,7 +18,7 @@ export default function ContentPage() {
           <div className="ph-card">
             <h1 data-reveal>Content.</h1>
             <p className="ph-sub" data-reveal>
-              Growth, CRO and analytics frameworks — unpacked one idea at a time on LinkedIn.
+              Growth, CRO and analytics frameworks, unpacked one idea at a time on LinkedIn.
             </p>
           </div>
         </div>
