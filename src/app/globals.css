@@ -737,6 +737,7 @@ main {
 /* LinkedIn embed carousel (Content page) — horizontal scroll */
 .li-scroller-wrap {
   position: relative;
+  margin-top: 24px;
 }
 
 .li-scroller {
