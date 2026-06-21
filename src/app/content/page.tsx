@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import ContactCard from "../_components/ContactCard";
-import LinkedInFeed from "../_components/LinkedInFeed";
+import LinkedInCards from "../_components/LinkedInCards";
 import { IconExternal } from "../_components/icons";
-import { postIds } from "../_components/linkedin-posts";
+import { posts } from "../_components/linkedin-posts";
 import { socials } from "../_components/nav-items";
 
 export const metadata: Metadata = {
@@ -28,7 +28,7 @@ export default function ContentPage() {
 
       <section className="block" style={{ paddingTop: 40 }}>
         <div className="wrap">
-          <LinkedInFeed ids={postIds} />
+          <LinkedInCards posts={posts} />
           <div className="foot-link" style={{ marginTop: 26 }}>
             <a className="link-more" href={socials.linkedin} target="_blank" rel="noopener noreferrer">
               See all on LinkedIn

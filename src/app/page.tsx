@@ -1,9 +1,9 @@
 import Link from "next/link";
 import BrandIcon from "./_components/BrandIcon";
 import ContactCard from "./_components/ContactCard";
-import LinkedInFeed from "./_components/LinkedInFeed";
+import LinkedInCards from "./_components/LinkedInCards";
 import { IconArrowRight, IconExternal, IconLinkedIn } from "./_components/icons";
-import { postIds } from "./_components/linkedin-posts";
+import { posts } from "./_components/linkedin-posts";
 import { socials } from "./_components/nav-items";
 
 const logoSrc = (domain: string) =>
@@ -88,7 +88,7 @@ export default function Home() {
               LinkedIn.
             </p>
           </div>
-          <LinkedInFeed ids={postIds.slice(0, 6)} />
+          <LinkedInCards posts={posts.slice(0, 6)} />
           <div className="foot-link">
             <a className="link-more" href={socials.linkedin} target="_blank" rel="noopener noreferrer">
               See more on LinkedIn
