@@ -479,7 +479,7 @@ main {
 .hero {
   background: var(--dark);
   color: #fff;
-  padding: 60px 0 72px;
+  padding: 52px 0 60px;
 }
 
 .hero-inner {
@@ -506,7 +506,7 @@ main {
 .hero h1 {
   color: #fff;
   margin-top: 22px;
-  font-size: clamp(38px, 6vw, 64px);
+  font-size: clamp(30px, 4.6vw, 50px);
 }
 
 .cursor {
@@ -543,7 +543,7 @@ main {
 .sub {
   margin-top: 22px;
   max-width: 540px;
-  font-size: clamp(16px, 2.2vw, 19px);
+  font-size: clamp(15px, 1.9vw, 17px);
   color: var(--dark-muted);
 }
 
@@ -672,7 +672,7 @@ main {
 }
 
 .sec-head h2 {
-  font-size: clamp(24px, 3.6vw, 31px);
+  font-size: clamp(20px, 3vw, 26px);
   margin-top: 12px;
 }
 
@@ -830,7 +830,7 @@ main {
 
 .contact-card h2 {
   color: #fff;
-  font-size: clamp(28px, 4.4vw, 40px);
+  font-size: clamp(24px, 3.6vw, 33px);
   margin-top: 14px;
 }
 
@@ -853,7 +853,7 @@ main {
 .page-head {
   background: var(--dark);
   color: #fff;
-  padding: 60px 0 56px;
+  padding: 52px 0 48px;
 }
 
 .page-head + .block {
@@ -863,14 +863,14 @@ main {
 .page-head h1 {
   color: #fff;
   margin-top: 16px;
-  font-size: clamp(36px, 5.4vw, 56px);
+  font-size: clamp(28px, 4.2vw, 44px);
 }
 
 .ph-sub {
   margin-top: 16px;
   max-width: 560px;
   color: var(--dark-muted);
-  font-size: clamp(16px, 2.2vw, 19px);
+  font-size: clamp(15px, 1.9vw, 17px);
 }
 
 .ph-sub b {
@@ -892,7 +892,7 @@ main {
 }
 
 .about-prose .lead {
-  font-size: clamp(19px, 2.8vw, 24px);
+  font-size: clamp(17px, 2.4vw, 21px);
   line-height: 1.45;
   color: var(--fg);
   font-weight: 500;
@@ -918,7 +918,7 @@ main {
 }
 
 .exp-title {
-  font-size: clamp(22px, 3vw, 28px);
+  font-size: clamp(19px, 2.6vw, 24px);
   margin-top: 8px;
 }
 
