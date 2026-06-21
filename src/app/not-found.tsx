@@ -5,11 +5,13 @@ export default function NotFound() {
   return (
     <main id="top">
       <header className="page-head">
-        <div className="wrap inner">
-          <h1 data-reveal>Page not found.</h1>
-          <p className="ph-sub" data-reveal>
-            The page you&rsquo;re looking for doesn&rsquo;t exist or has moved.
-          </p>
+        <div className="wrap">
+          <div className="ph-card">
+            <h1 data-reveal>Page not found.</h1>
+            <p className="ph-sub" data-reveal>
+              The page you&rsquo;re looking for doesn&rsquo;t exist or has moved.
+            </p>
+          </div>
         </div>
       </header>
 

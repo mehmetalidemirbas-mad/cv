@@ -479,9 +479,14 @@ main {
 /* ------------------------------------------------------------------ hero -- */
 
 .hero {
+  padding: 20px 0;
+}
+
+.hero-card {
   background: var(--dark);
   color: #fff;
-  padding: 34px 0 38px;
+  border-radius: 26px;
+  padding: 44px 44px;
 }
 
 .hero-inner {
@@ -507,7 +512,6 @@ main {
 
 .hero h1 {
   color: #fff;
-  margin-top: 22px;
   font-size: clamp(22px, 3vw, 32px);
 }
 
@@ -853,9 +857,14 @@ main {
 /* ------------------------------------------------------------ page head --- */
 
 .page-head {
+  padding: 20px 0;
+}
+
+.ph-card {
   background: var(--dark);
   color: #fff;
-  padding: 32px 0 28px;
+  border-radius: 26px;
+  padding: 40px 44px;
 }
 
 .page-head + .block {
@@ -864,7 +873,6 @@ main {
 
 .page-head h1 {
   color: #fff;
-  margin-top: 16px;
   font-size: clamp(20px, 2.8vw, 28px);
 }
 
@@ -1262,8 +1270,10 @@ main {
     display: none;
   }
 
-  .contact-card {
-    padding: 36px 24px;
-    border-radius: 22px;
+  .contact-card,
+  .hero-card,
+  .ph-card {
+    padding: 32px 22px;
+    border-radius: 20px;
   }
 }

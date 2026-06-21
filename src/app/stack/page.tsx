@@ -95,11 +95,13 @@ export default function StackPage() {
   return (
     <main id="top">
       <header className="page-head">
-        <div className="wrap inner">
-          <h1 data-reveal>Stack.</h1>
-          <p className="ph-sub" data-reveal>
-            Software I use to craft something valuable.
-          </p>
+        <div className="wrap">
+          <div className="ph-card">
+            <h1 data-reveal>Stack.</h1>
+            <p className="ph-sub" data-reveal>
+              Software I use to craft something valuable.
+            </p>
+          </div>
         </div>
       </header>
 

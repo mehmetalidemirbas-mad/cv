@@ -14,11 +14,13 @@ export default function ContentPage() {
   return (
     <main id="top">
       <header className="page-head">
-        <div className="wrap inner">
-          <h1 data-reveal>Content.</h1>
-          <p className="ph-sub" data-reveal>
-            Growth, CRO and analytics frameworks — unpacked one idea at a time on LinkedIn.
-          </p>
+        <div className="wrap">
+          <div className="ph-card">
+            <h1 data-reveal>Content.</h1>
+            <p className="ph-sub" data-reveal>
+              Growth, CRO and analytics frameworks — unpacked one idea at a time on LinkedIn.
+            </p>
+          </div>
         </div>
       </header>
 

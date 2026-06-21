@@ -9,30 +9,32 @@ export default function Home() {
   return (
     <main id="top">
       <header className="hero">
-        <div className="wrap hero-inner">
-          <h1 data-reveal>
-            Hi, this is
-            <br />
-            Ali Demirbaş.
-          </h1>
-          <p className="sub" data-reveal>
-            <b>Performance &amp; Growth Strategist.</b> I drive product scale through data-driven
-            precision and engineered marketing.
-          </p>
-          <div className="hero-cta" data-reveal>
-            <Link className="btn btn--primary" href="/about">
-              About
-              <IconArrowRight />
-            </Link>
-            <a
-              className="btn btn--dark btn--icon"
-              href={socials.linkedin}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="LinkedIn"
-            >
-              <IconLinkedIn />
-            </a>
+        <div className="wrap">
+          <div className="hero-card">
+            <h1 data-reveal>
+              Hi, this is
+              <br />
+              Ali Demirbaş.
+            </h1>
+            <p className="sub" data-reveal>
+              <b>Performance &amp; Growth Strategist.</b> I drive product scale through data-driven
+              precision and engineered marketing.
+            </p>
+            <div className="hero-cta" data-reveal>
+              <Link className="btn btn--primary" href="/about">
+                About
+                <IconArrowRight />
+              </Link>
+              <a
+                className="btn btn--dark btn--icon"
+                href={socials.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+              >
+                <IconLinkedIn />
+              </a>
+            </div>
           </div>
         </div>
       </header>
