@@ -20,8 +20,8 @@
   --dark: #0f1b34;
   --dark-muted: #aab3c4;
   --radius: 14px;
-  --sidebar-w: 264px;
-  --wrap: 940px;
+  --sidebar-w: 248px;
+  --wrap: 820px;
 }
 
 * {
@@ -479,7 +479,7 @@ main {
 .hero {
   background: var(--dark);
   color: #fff;
-  padding: 52px 0 60px;
+  padding: 48px 0 54px;
 }
 
 .hero-inner {
@@ -506,7 +506,7 @@ main {
 .hero h1 {
   color: #fff;
   margin-top: 22px;
-  font-size: clamp(30px, 4.6vw, 50px);
+  font-size: clamp(27px, 4vw, 43px);
 }
 
 .cursor {
@@ -562,7 +562,7 @@ main {
 /* --------------------------------------------------------------- blocks --- */
 
 .block {
-  padding: 52px 0;
+  padding: 46px 0;
   border-top: 1px solid var(--line);
 }
 
@@ -600,7 +600,7 @@ main {
 }
 
 .about-bio p {
-  font-size: clamp(18px, 2.4vw, 22px);
+  font-size: clamp(15px, 1.8vw, 17px);
   line-height: 1.5;
   color: var(--fg);
   font-weight: 450;
@@ -672,7 +672,7 @@ main {
 }
 
 .sec-head h2 {
-  font-size: clamp(20px, 3vw, 26px);
+  font-size: clamp(19px, 2.6vw, 24px);
   margin-top: 12px;
 }
 
@@ -830,7 +830,7 @@ main {
 
 .contact-card h2 {
   color: #fff;
-  font-size: clamp(24px, 3.6vw, 33px);
+  font-size: clamp(22px, 3.2vw, 30px);
   margin-top: 14px;
 }
 
@@ -853,7 +853,7 @@ main {
 .page-head {
   background: var(--dark);
   color: #fff;
-  padding: 52px 0 48px;
+  padding: 46px 0 42px;
 }
 
 .page-head + .block {
@@ -863,7 +863,7 @@ main {
 .page-head h1 {
   color: #fff;
   margin-top: 16px;
-  font-size: clamp(28px, 4.2vw, 44px);
+  font-size: clamp(25px, 3.6vw, 37px);
 }
 
 .ph-sub {
@@ -882,8 +882,8 @@ main {
 
 .bio-wrap {
   display: grid;
-  grid-template-columns: 1fr 360px;
-  gap: 44px;
+  grid-template-columns: 1fr 320px;
+  gap: 40px;
   align-items: start;
 }
 
@@ -892,7 +892,7 @@ main {
 }
 
 .about-prose .lead {
-  font-size: clamp(17px, 2.4vw, 21px);
+  font-size: clamp(16px, 2.2vw, 19px);
   line-height: 1.45;
   color: var(--fg);
   font-weight: 500;
@@ -910,7 +910,7 @@ main {
 
 .about-photo img {
   width: 100%;
-  max-width: 360px;
+  max-width: 320px;
   aspect-ratio: 1 / 1;
   border-radius: 20px;
   object-fit: cover;
