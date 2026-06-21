@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { IconExternal, IconInstagram, IconLinkedIn, IconMail } from "../_components/icons";
+import { IconArrowRight, IconExternal, IconLinkedIn, IconMail } from "../_components/icons";
 import { socials } from "../_components/nav-items";
 
 export const metadata: Metadata = {
@@ -12,10 +12,10 @@ export default function ContactPage() {
       <header className="page-head">
         <div className="wrap">
           <div className="ph-card">
-            <h1 data-reveal>Let&rsquo;s talk.</h1>
+            <h1 data-reveal>Let&rsquo;s connect.</h1>
             <p className="ph-sub" data-reveal>
-              I&rsquo;m always open to interesting conversations about{" "}
-              <b>growth, analytics, and building things.</b>
+              Have a question, an idea, or just want to say hello? Feel free to reach out through any
+              of the channels below.
             </p>
           </div>
         </div>
@@ -31,7 +31,7 @@ export default function ContactPage() {
               <span className="cb-label">Connect on LinkedIn</span>
               <span className="cb-sub">linkedin.com/in/ali-demirbas</span>
               <span className="cb-go">
-                Open profile <IconExternal />
+                View profile <IconExternal />
               </span>
             </a>
 
@@ -42,18 +42,7 @@ export default function ContactPage() {
               <span className="cb-label">Send an email</span>
               <span className="cb-sub">{socials.email}</span>
               <span className="cb-go">
-                Compose <IconExternal />
-              </span>
-            </a>
-
-            <a className="cblock" href={socials.instagram} target="_blank" rel="noopener noreferrer" data-reveal style={{ transitionDelay: ".24s" }}>
-              <span className="cb-ic">
-                <IconInstagram />
-              </span>
-              <span className="cb-label">Follow on Instagram</span>
-              <span className="cb-sub">@alidemirbaas</span>
-              <span className="cb-go">
-                Open profile <IconExternal />
+                Email me <IconArrowRight />
               </span>
             </a>
           </div>

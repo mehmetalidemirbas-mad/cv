@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { sidebarGroups, socials } from "./nav-items";
-import { IconExternal, IconInstagram, IconLinkedIn } from "./icons";
+import { IconExternal, IconLinkedIn } from "./icons";
 
 export default function Sidebar() {
   const pathname = usePathname();
@@ -51,26 +51,15 @@ export default function Sidebar() {
 
               {/* External links live under the Connect group. */}
               {group.label === "Connect" ? (
-                <>
-                  <li>
-                    <a className="sb-link" href={socials.linkedin} target="_blank" rel="noopener noreferrer">
-                      <IconLinkedIn />
-                      LinkedIn
-                      <span className="sb-ext">
-                        <IconExternal />
-                      </span>
-                    </a>
-                  </li>
-                  <li>
-                    <a className="sb-link" href={socials.instagram} target="_blank" rel="noopener noreferrer">
-                      <IconInstagram />
-                      Instagram
-                      <span className="sb-ext">
-                        <IconExternal />
-                      </span>
-                    </a>
-                  </li>
-                </>
+                <li>
+                  <a className="sb-link" href={socials.linkedin} target="_blank" rel="noopener noreferrer">
+                    <IconLinkedIn />
+                    LinkedIn
+                    <span className="sb-ext">
+                      <IconExternal />
+                    </span>
+                  </a>
+                </li>
               ) : null}
             </ul>
           </div>
