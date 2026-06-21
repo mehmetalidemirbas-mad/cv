@@ -44,10 +44,10 @@ export default function Home() {
           <div className="about-bio" data-reveal>
             <span className="eyebrow">About</span>
             <p style={{ marginTop: 24 }}>
-              I architect the core data framework that powers sustainable growth — engineering
-              precise GA4/GTM pipelines, optimizing complex Adjust MMP setups, and executing
-              evidence-based CRO programs to convert traffic into high-value revenue. I approach
-              marketing as an iterative engineering discipline: rigorous instrumentation,
+              I architect the core data framework that powers sustainable growth. I engineer
+              precise GA4/GTM pipelines, optimize complex Adjust MMP setups, and run
+              evidence-based CRO programs that convert traffic into high-value revenue. I treat
+              marketing as an iterative engineering discipline built on rigorous instrumentation,
               data-driven optimization, and methodical execution.
             </p>
             <div className="foot-link" style={{ marginTop: 18 }}>
@@ -68,7 +68,7 @@ export default function Home() {
               <h2>Latest content</h2>
             </div>
             <p className="sec-lede">
-              Growth, CRO and analytics frameworks — unpacked one idea at a time on LinkedIn.
+              Growth, CRO and analytics frameworks, unpacked one idea at a time on LinkedIn.
             </p>
           </div>
           <LinkedInFeed ids={postIds.slice(0, 6)} />
