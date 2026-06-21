@@ -11,8 +11,8 @@ const logoSrc = (domain: string) =>
 
 // A curated cross-section of the full Stack page, surfaced on the home page.
 const stackPreview = [
-  { name: "Figma", domain: "figma.com", tag: "Design Tool" },
-  { name: "GA4", domain: "analytics.google.com", tag: "Web Analytics" },
+  { name: "Figma", domain: "figma.com", tag: "Design & Prototyping" },
+  { name: "Google Analytics 4", domain: "analytics.google.com", tag: "Web Analytics" },
   { name: "Google Tag Manager", domain: "tagmanager.google.com", tag: "Tag Management" },
   { name: "Adjust", domain: "adjust.com", tag: "Mobile Attribution" },
   { name: "Mixpanel", domain: "mixpanel.com", tag: "Product Analytics" },
@@ -102,9 +102,10 @@ export default function Home() {
         <div className="wrap">
           <div className="sec-head sec-head--stacked" data-reveal>
             <span className="eyebrow">Stack</span>
-            <h2>Tools I work with</h2>
+            <h2>Tools I use</h2>
             <p className="sec-lede">
-              The software I instrument, query and optimize growth with every day.
+              The tools I use to design experiments, build reliable measurement, analyze user
+              behavior, and optimize growth.
             </p>
           </div>
           <div className="sg-grid" data-reveal>
@@ -120,7 +121,7 @@ export default function Home() {
           </div>
           <div className="foot-link">
             <Link className="link-more" href="/stack">
-              See full stack
+              Explore my toolkit
               <IconArrowRight />
             </Link>
           </div>
