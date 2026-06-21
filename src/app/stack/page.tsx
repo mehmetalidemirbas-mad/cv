@@ -16,7 +16,7 @@ const groups = [
   {
     title: "Design & Build",
     tools: [
-      { name: "Figma", domain: "figma.com", tag: "Design Tool" },
+      { name: "Figma", domain: "figma.com", tag: "Design & Prototyping" },
       { name: "Framer", domain: "framer.com", tag: "Web Design Platform" },
       { name: "ChatGPT", domain: "openai.com", tag: "OpenAI" },
       { name: "Canva", domain: "canva.com", tag: "Design & Graphics" },
@@ -30,7 +30,7 @@ const groups = [
       { name: "Mixpanel", domain: "mixpanel.com", tag: "Product Analytics" },
       { name: "Hotjar", domain: "hotjar.com", tag: "Heatmaps & Recordings" },
       { name: "Microsoft Clarity", domain: "clarity.microsoft.com", tag: "Behavior Analytics" },
-      { name: "GA4", domain: "analytics.google.com", tag: "Web Analytics" },
+      { name: "Google Analytics 4", domain: "analytics.google.com", tag: "Web Analytics" },
       { name: "Google Tag Manager", domain: "tagmanager.google.com", tag: "Tag Management" },
       { name: "Smartlook", domain: "smartlook.com", tag: "Session Analytics" },
     ],
