@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useRef } from "react";
 import { IconExternal, IconLinkedIn } from "./icons";
 import type { LinkedInPost } from "./linkedin-posts";
@@ -43,9 +44,19 @@ export default function LinkedInCards({ posts }: { posts: LinkedInPost[] }) {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <span className="li-post-top">
+            <span className="li-post-head">
+              <Image
+                className="li-ava"
+                src="/foto.webp"
+                alt="Ali Demirbaş"
+                width={48}
+                height={48}
+              />
+              <span className="li-who">
+                <span className="li-name">Ali Demirbaş</span>
+                <span className="li-role">Growth Marketing | CRM Marketing</span>
+              </span>
               <IconLinkedIn />
-              <span className="li-topic">{post.topic}</span>
             </span>
             <p className="li-post-text">{post.summary}</p>
             <span className="li-post-go">
