@@ -94,11 +94,13 @@ export default function AboutPage() {
   return (
     <main id="top">
       <header className="page-head">
-        <div className="wrap inner">
-          <h1 data-reveal>Professional Overview</h1>
-          <p className="ph-sub" data-reveal>
-            Growth Strategy. Data Architecture. Product Scaling.
-          </p>
+        <div className="wrap">
+          <div className="ph-card">
+            <h1 data-reveal>Professional Overview</h1>
+            <p className="ph-sub" data-reveal>
+              Growth Strategy. Data Architecture. Product Scaling.
+            </p>
+          </div>
         </div>
       </header>
 

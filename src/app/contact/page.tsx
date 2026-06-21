@@ -10,12 +10,14 @@ export default function ContactPage() {
   return (
     <main id="top">
       <header className="page-head">
-        <div className="wrap inner">
-          <h1 data-reveal>Let&rsquo;s talk.</h1>
-          <p className="ph-sub" data-reveal>
-            I&rsquo;m always open to interesting conversations about{" "}
-            <b>growth, analytics, and building things.</b>
-          </p>
+        <div className="wrap">
+          <div className="ph-card">
+            <h1 data-reveal>Let&rsquo;s talk.</h1>
+            <p className="ph-sub" data-reveal>
+              I&rsquo;m always open to interesting conversations about{" "}
+              <b>growth, analytics, and building things.</b>
+            </p>
+          </div>
         </div>
       </header>
 
