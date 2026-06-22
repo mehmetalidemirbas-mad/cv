@@ -58,6 +58,7 @@ export default function LinkedInCards({ posts }: { posts: LinkedInPost[] }) {
               </span>
               <IconLinkedIn />
             </span>
+            <span className="li-title">{post.title}</span>
             <p className="li-post-text">{post.summary}</p>
             <span className="li-post-go">
               Read on LinkedIn <IconExternal />

@@ -1,14 +1,28 @@
 import type { Metadata } from "next";
-import { DM_Sans } from "next/font/google";
+import { DM_Sans, Public_Sans, PT_Serif } from "next/font/google";
 import "./globals.css";
-import Sidebar from "./_components/Sidebar";
-import MobileTopbar from "./_components/MobileTopbar";
-import TabBar from "./_components/TabBar";
+import Navbar from "./_components/Navbar";
 import Footer from "./_components/Footer";
 
 const dmSans = DM_Sans({
   subsets: ["latin"],
   variable: "--font-sans",
+  display: "swap",
+});
+
+// Display + serif accent faces used by the redesigned (Cohesion-style) sections.
+const publicSans = Public_Sans({
+  subsets: ["latin"],
+  weight: ["600", "700", "800", "900"],
+  variable: "--font-display",
+  display: "swap",
+});
+
+const ptSerif = PT_Serif({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+  style: ["italic", "normal"],
+  variable: "--font-serif",
   display: "swap",
 });
 
@@ -44,11 +58,12 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={dmSans.variable}>
+    <html
+      lang="en"
+      className={`${dmSans.variable} ${publicSans.variable} ${ptSerif.variable}`}
+    >
       <body>
-        <Sidebar />
-        <MobileTopbar />
-        <TabBar />
+        <Navbar />
         <div className="app-main">
           {children}
           <Footer />

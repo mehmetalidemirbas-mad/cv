@@ -1,5 +1,5 @@
-// LinkedIn post activity ids, newest first. Shared by the home "Latest content"
-// preview and the full Content page.
+// LinkedIn post activity ids, newest first. The `posts` array below maps each id
+// to its title + summary; the card links are derived from the id.
 export const postIds = [
   "7470079770823901185",
   "7467539714124906498",
@@ -36,60 +36,75 @@ export const postIds = [
 
 export type LinkedInPost = {
   id: string;
-  topic: string;
+  title: string;
   summary: string;
 };
 
-// NOTE: these summaries are PLACEHOLDER copy used to preview the card layout.
-// Replace each `summary` with the real English summary of the matching post
-// before going live.
 export const posts: LinkedInPost[] = [
   {
     id: "7470079770823901185",
-    topic: "Analytics",
+    title: "Pre-Send Email Checklist",
     summary:
-      "A reliable measurement setup is the foundation of every growth decision. In this post I break down how I structure GA4 and GTM so events stay consistent across web and app. I share the naming conventions and validation checks I run before trusting a single number. The goal is simple: data you can actually build strategy on, not dashboards nobody trusts.",
+      "Small email mistakes can have a major impact, from broken links and invisible CTAs to messages landing in spam. In this post, I share the practical checklist I review before every campaign goes live. These quick checks help identify issues early, reduce avoidable errors, and ensure each email reaches the audience as intended.",
   },
   {
     id: "7467539714124906498",
-    topic: "Growth",
+    title: "A $100K Path to Product-Market Fit",
     summary:
-      "Growth is rarely about one big lever; it is the compounding of many small, deliberate improvements. Here I walk through how I prioritize experiments when time and traffic are limited. I explain the framework I use to weigh impact against effort and confidence. I also cover why killing a losing test quickly matters as much as scaling a winning one.",
+      "Finding product-market fit does not always require millions of dollars. In this post, I share a disciplined one-year, $100K growth plan for a B2B SaaS company with a working MVP. The framework covers preparation, customer discovery, validation, activation, and demand generation, while using AI as an operational partner rather than simply another tool.",
   },
   {
     id: "7462119181740617728",
-    topic: "CRO",
+    title: "In-House, Outsourced or Hybrid?",
     summary:
-      "Most conversion problems are really clarity problems. In this post I look at how friction hides inside flows we assume are already fine. I share examples where a small copy or layout change moved the metric more than a full redesign would. I also explain how I separate real signal from noise when sample sizes are small. Optimization is a habit, not a one-time project.",
+      "Growing companies eventually face an important decision: which capabilities should remain in-house, and which should be supported externally? In this post, I compare in-house, outsourced, and hybrid growth models. I also explain why the right structure depends on the company's stage, resources, existing capabilities, and growth objectives, and why that structure should evolve over time.",
   },
   {
     id: "7457125720335556609",
-    topic: "Attribution",
+    title: "Building a Product with AI",
     summary:
-      "Mobile attribution is where a lot of growth budgets quietly leak. Here I explain how I approach Adjust and MMP setups so installs and in-app events line up with reality. I cover the gap between what looks good in a dashboard and what actually drives revenue. I also share the checks I run to catch broken tracking before it skews an entire campaign.",
+      "AI may appear effortless in theory, but the real learning begins when you use it to build a working product. In this post, I share our experience creating numespace.com and treating AI as a collaborative partner across development, design, SEO, and user experience. The process showed us that speed matters only when it is supported by clear strategy and product thinking.",
   },
   {
     id: "7448339752757702656",
-    topic: "Experimentation",
+    title: "Mapping E-Commerce User Flows",
     summary:
-      "Experimentation only works when the question is sharp. In this post I describe how I frame a hypothesis so the result is actually usable. I talk through choosing the right metric, guarding against peeking, and documenting what we learned even when a test fails. The compounding value is not any single win; it is the system that keeps producing them.",
+      "A smooth e-commerce experience begins with understanding and mapping every step of the customer journey. In this post, I share a practical template covering essential flows such as registration, product discovery, ordering, referrals, and account management. The template can be copied, adapted, and expanded according to the needs of different e-commerce products.",
   },
   {
     id: "7444258376672354304",
-    topic: "Data",
+    title: "Modern Marketing Case Studies",
     summary:
-      "Numbers do not speak for themselves; the way you structure them decides what you see. Here I share how I turn raw analytics into a view a team can act on in minutes. I cover the metrics I keep on the dashboard and the ones I deliberately leave off. I also explain why a smaller, trusted set of KPIs beats a wall of charts every time.",
+      "Many marketing interview case studies are outdated, overly generic, or disconnected from real business challenges. In this post, I share a collection of 13 detailed, data-driven case studies covering Growth Marketing, Performance Marketing, and CRM. The resource is designed to help companies select relevant interview questions and help candidates understand the analytical and strategic skills expected in modern marketing roles.",
   },
   {
     id: "7442933404221796353",
-    topic: "Lifecycle",
+    title: "The Dark Side of Segmentation",
     summary:
-      "Retention is where sustainable growth is won or lost. In this post I unpack how I design lifecycle programs that reach users at the right moment instead of spamming them. I share how I segment by behavior rather than guesswork, and how I measure incremental impact. Good lifecycle marketing feels helpful to the user and shows up clearly in the numbers.",
+      "More segments do not automatically create better personalization. In this post, I explain how excessive or poorly designed segmentation often increases operational complexity without changing the underlying strategy. I also share a simple way to audit a segmentation portfolio, remove unnecessary audiences, and focus only on groups that lead to genuinely different decisions or actions.",
   },
   {
     id: "7434669739295232002",
-    topic: "Strategy",
+    title: "Site Speed Is a Revenue Metric",
     summary:
-      "Marketing works best when every initiative ties back to a business goal. Here I explain how I connect channel work to revenue rather than vanity metrics. I walk through the questions I ask before launching anything and how I decide what to stop doing. The aim is focus: fewer, sharper bets that move the outcomes that matter.",
+      "A slow website is not only a technical issue; it is a direct growth and revenue problem. In this post, I explain how poor site performance can increase abandonment, reduce conversion rates, and weaken advertising efficiency. Sometimes the biggest growth opportunity is not attracting more traffic, but creating a faster and more seamless experience for the traffic you already have.",
+  },
+  {
+    id: "7430505676927340544",
+    title: "The Mathematics of Growth",
+    summary:
+      "Sustainable growth requires more than monitoring revenue and campaign performance. In this post, I explain the financial and behavioural metrics behind healthy growth, including CAC, payback period, estimated lifetime value, activation, retention, and repeat purchase. The goal is to make growth mathematics easier to understand and help teams interpret the right metric at the right time.",
+  },
+  {
+    id: "7427585109551345664",
+    title: "Loyalty or Discount Dependency?",
+    summary:
+      "Repeat purchases do not always indicate genuine customer loyalty. In this post, I explore how frequent promotions can make customers loyal to discounts rather than to the brand itself. True loyalty becomes visible when customers continue purchasing without incentives, return for the overall experience, and recommend the brand because of its value, quality, or service.",
+  },
+  {
+    id: "7426172976875868161",
+    title: "A 10-Step CRM Audit",
+    summary:
+      "Starting a new CRM role often means entering a complex environment filled with data, journeys, campaigns, and competing priorities. In this post, I share a practical 10-step CRM audit designed to reveal where the biggest issues and opportunities are. The framework also includes a scoring method to help teams assess their current position and determine what to prioritize next.",
   },
 ];
