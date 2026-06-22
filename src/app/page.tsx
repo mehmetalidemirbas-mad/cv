@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import AboutStack from "./_components/AboutStack";
 import ContactCard from "./_components/ContactCard";
 import LinkedInCards from "./_components/LinkedInCards";
 import StackFlip, { type StackTool } from "./_components/StackFlip";
@@ -74,52 +75,7 @@ export default function Home() {
       </header>
 
       <section className="co-section" id="about">
-        <div className="co-shell co-about">
-          <div className="co-about-aside" data-reveal>
-            <span className="co-eyebrow">Get to know me</span>
-            <h2 className="co-display">
-              About <em>me</em>
-            </h2>
-            <div className="co-stats">
-              <span className="co-stat">
-                <strong>8+</strong>
-                <small>Years in growth</small>
-              </span>
-              <span className="co-stat">
-                <strong>Data</strong>
-                <small>& user behavior</small>
-              </span>
-            </div>
-            <Link className="co-btn" href="/about">
-              Read my CV
-              <IconArrowRight />
-            </Link>
-          </div>
-
-          <div className="co-about-cards" data-reveal>
-            <article className="co-frame">
-              <p>
-                I&apos;m a Growth Marketer with 8+ years working at the intersection of data and user
-                behavior. I help digital products grow sustainably by turning analytics into
-                decisions, and decisions into measurable outcomes.
-              </p>
-            </article>
-            <article className="co-frame">
-              <p>
-                My work spans measurement frameworks, user acquisition, and CRO. I implement GA4 and
-                GTM tracking, optimize Adjust MMP setups, and design evidence-based experiments that
-                turn user insights into business growth.
-              </p>
-            </article>
-            <article className="co-frame">
-              <p>
-                I approach marketing as an iterative process built on accurate data, structured
-                experimentation, and continuous optimization, keeping every initiative aligned with
-                the business goals behind it.
-              </p>
-            </article>
-          </div>
-        </div>
+        <AboutStack />
       </section>
 
       <section className="block" id="content">
