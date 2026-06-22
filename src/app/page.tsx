@@ -1,25 +1,22 @@
 import Image from "next/image";
 import Link from "next/link";
-import BrandIcon from "./_components/BrandIcon";
 import ContactCard from "./_components/ContactCard";
 import LinkedInCards from "./_components/LinkedInCards";
+import StackFlip, { type StackTool } from "./_components/StackFlip";
 import { IconAbout, IconArrowRight, IconContact, IconContent, IconExternal } from "./_components/icons";
 import { posts } from "./_components/linkedin-posts";
 import { socials } from "./_components/nav-items";
 
-const logoSrc = (domain: string) =>
-  `https://www.google.com/s2/favicons?domain=${domain}&sz=128`;
-
 // A curated cross-section of the full Stack page, surfaced on the home page.
-const stackPreview = [
-  { name: "Figma", domain: "figma.com", tag: "Design & Prototyping" },
-  { name: "Google Analytics 4", domain: "analytics.google.com", tag: "Web Analytics" },
-  { name: "Google Tag Manager", domain: "tagmanager.google.com", tag: "Tag Management" },
-  { name: "Adjust", domain: "adjust.com", tag: "Mobile Attribution" },
-  { name: "Mixpanel", domain: "mixpanel.com", tag: "Product Analytics" },
-  { name: "Looker Studio", domain: "lookerstudio.google.com", tag: "Data Visualisation" },
-  { name: "Insider", domain: "useinsider.com", tag: "Omnichannel Marketing" },
-  { name: "Braze", domain: "braze.com", tag: "Customer Engagement" },
+const stackPreview: StackTool[] = [
+  { name: "Figma", domain: "figma.com", tag: "Design & Prototyping", blurb: "Designing landing pages and experiment mockups before they go live." },
+  { name: "Google Analytics 4", domain: "analytics.google.com", tag: "Web Analytics", blurb: "Event-based web and app analytics, funnels, and conversion tracking." },
+  { name: "Google Tag Manager", domain: "tagmanager.google.com", tag: "Tag Management", blurb: "Deploying and governing tracking tags without shipping new code." },
+  { name: "Adjust", domain: "adjust.com", tag: "Mobile Attribution", blurb: "Mobile attribution and measuring acquisition campaigns end to end." },
+  { name: "Mixpanel", domain: "mixpanel.com", tag: "Product Analytics", blurb: "Product analytics for retention, cohorts, and user journeys." },
+  { name: "Looker Studio", domain: "lookerstudio.google.com", tag: "Data Visualisation", blurb: "Dashboards that turn growth KPIs into something teams can act on." },
+  { name: "Insider", domain: "useinsider.com", tag: "Omnichannel Marketing", blurb: "Omnichannel campaigns and personalization across the lifecycle." },
+  { name: "Braze", domain: "braze.com", tag: "Customer Engagement", blurb: "Lifecycle messaging and customer engagement at scale." },
 ];
 
 export default function Home() {
@@ -76,23 +73,51 @@ export default function Home() {
         </div>
       </header>
 
-      <section className="block" id="about">
-        <div className="wrap">
-          <div className="about-bio" data-reveal>
-            <span className="eyebrow">About</span>
-            <p style={{ marginTop: 24 }}>
-              I build reliable measurement frameworks that help digital products grow sustainably.
-              My work includes implementing GA4 and GTM tracking systems, optimizing Adjust MMP
-              setups, and designing evidence-based CRO programs that turn user insights into
-              measurable business growth. I approach marketing as an iterative process built on
-              accurate data, structured experimentation, and continuous optimization.
-            </p>
-            <div className="foot-link" style={{ marginTop: 18 }}>
-              <Link className="link-more" href="/about">
-                More about me
-                <IconArrowRight />
-              </Link>
+      <section className="co-section" id="about">
+        <div className="co-shell co-about">
+          <div className="co-about-aside" data-reveal>
+            <span className="co-eyebrow">Get to know me</span>
+            <h2 className="co-display">
+              About <em>me</em>
+            </h2>
+            <div className="co-stats">
+              <span className="co-stat">
+                <strong>8+</strong>
+                <small>Years in growth</small>
+              </span>
+              <span className="co-stat">
+                <strong>Data</strong>
+                <small>& user behavior</small>
+              </span>
             </div>
+            <Link className="co-btn" href="/about">
+              Read my CV
+              <IconArrowRight />
+            </Link>
+          </div>
+
+          <div className="co-about-cards" data-reveal>
+            <article className="co-frame">
+              <p>
+                I&apos;m a Growth Marketer with 8+ years working at the intersection of data and user
+                behavior. I help digital products grow sustainably by turning analytics into
+                decisions, and decisions into measurable outcomes.
+              </p>
+            </article>
+            <article className="co-frame">
+              <p>
+                My work spans measurement frameworks, user acquisition, and CRO. I implement GA4 and
+                GTM tracking, optimize Adjust MMP setups, and design evidence-based experiments that
+                turn user insights into business growth.
+              </p>
+            </article>
+            <article className="co-frame">
+              <p>
+                I approach marketing as an iterative process built on accurate data, structured
+                experimentation, and continuous optimization, keeping every initiative aligned with
+                the business goals behind it.
+              </p>
+            </article>
           </div>
         </div>
       </section>
@@ -119,29 +144,21 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="block" id="stack">
-        <div className="wrap">
-          <div className="sec-head sec-head--stacked" data-reveal>
-            <span className="eyebrow">Stack</span>
-            <h2>Tools I use</h2>
-            <p className="sec-lede">
+      <section className="co-section co-section--tint" id="stack">
+        <div className="co-shell">
+          <div className="co-stack-head" data-reveal>
+            <span className="co-eyebrow">My toolkit</span>
+            <h2 className="co-display">
+              My <em>stack</em>
+            </h2>
+            <p className="co-lede">
               The tools I use to design experiments, build reliable measurement, analyze user
               behavior, and optimize growth.
             </p>
           </div>
-          <div className="sg-grid" data-reveal>
-            {stackPreview.map((tool) => (
-              <div className="sg-tool" key={tool.name}>
-                <BrandIcon name={tool.name} src={logoSrc(tool.domain)} />
-                <span className="meta">
-                  <span className="tname">{tool.name}</span>
-                  <span className="ttag">{tool.tag}</span>
-                </span>
-              </div>
-            ))}
-          </div>
-          <div className="foot-link">
-            <Link className="link-more" href="/stack">
+          <StackFlip tools={stackPreview} />
+          <div className="co-foot">
+            <Link className="co-btn co-btn--ghost" href="/stack">
               Explore my toolkit
               <IconArrowRight />
             </Link>
