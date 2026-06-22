@@ -938,11 +938,19 @@ main {
   flex: 0 0 auto;
 }
 
+.li-title {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.3;
+  color: var(--fg);
+  letter-spacing: -0.01em;
+}
+
 .li-post-text {
   flex: 1;
   margin: 0;
-  color: var(--fg);
-  font-size: 15px;
+  color: var(--muted);
+  font-size: 14.5px;
   line-height: 1.6;
 }
 
