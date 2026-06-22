@@ -1770,43 +1770,45 @@ main {
   color: var(--accent-ink);
 }
 
-/* About me — centered title with stacked, rotated tinted cards that rise up
-   from the bottom as they enter the viewport (Cohesion-style). */
+/* About me — the title stays pinned while the cards rise up from the bottom
+   and stack on top of one another as you scroll (Cohesion-style, CSS sticky). */
+.co-about-wrap {
+  position: relative;
+}
 .co-about-head {
+  position: sticky;
+  top: 15vh;
+  z-index: 0;
   text-align: center;
-  max-width: 760px;
-  margin: 0 auto 8px;
+  margin-bottom: 7vh;
+  pointer-events: none;
 }
 .co-about-stack {
-  max-width: 640px;
-  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+  max-width: 660px;
 }
 .co-acard {
-  margin-top: -28px;
+  position: sticky;
+  top: 28vh;
+  margin: 0 auto 34vh;
   padding: 12px;
   border-radius: 30px;
   border: 1px solid color-mix(in srgb, var(--accent) 22%, transparent);
   background: color-mix(in srgb, var(--accent) 6%, transparent);
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
-  box-shadow: 0 30px 60px -42px rgba(15, 27, 52, 0.55);
-  /* rise-from-bottom entrance, settling into a slight rotation */
-  opacity: 0;
-  transform: translateY(72px) rotate(0deg);
-  transition: opacity 0.7s ease, transform 0.8s cubic-bezier(0.2, 0.7, 0.2, 1);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  box-shadow: 0 36px 64px -42px rgba(15, 27, 52, 0.6);
+  transform: rotate(var(--rot, 0deg));
 }
-.co-acard:first-child {
-  margin-top: 0;
-}
-.co-acard.in {
-  opacity: 1;
-  transform: translateY(0) rotate(var(--rot, 0deg));
+.co-acard:last-child {
+  margin-bottom: 8vh;
 }
 .co-acard-inner {
   display: flex;
   flex-direction: column;
   gap: 18px;
-  padding: 34px 36px;
+  padding: 36px 38px;
   border-radius: 22px;
   background: #fff;
 }
@@ -1815,11 +1817,13 @@ main {
   line-height: 1.62;
   color: #3a4256;
 }
-@media (prefers-reduced-motion: reduce) {
+@media (max-width: 680px) {
+  .co-about-head {
+    top: 11vh;
+  }
   .co-acard {
-    opacity: 1;
-    transform: rotate(var(--rot, 0deg));
-    transition: none;
+    top: 22vh;
+    margin-bottom: 30vh;
   }
 }
 

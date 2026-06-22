@@ -1,6 +1,4 @@
-"use client";
-
-import { useEffect, useRef } from "react";
+import type { CSSProperties } from "react";
 import Link from "next/link";
 import { IconArrowRight } from "./icons";
 
@@ -20,57 +18,29 @@ const cards: Card[] = [
   {
     text:
       "I approach marketing as an iterative process built on accurate data, structured experimentation, and continuous optimization, keeping every initiative aligned with the business goals behind it.",
-    rot: -1.5,
+    rot: -2,
     cta: true,
   },
 ];
 
-// Cohesion-style "About me" block: a centered title with stacked, slightly
-// rotated tinted cards that rise up from the bottom as they scroll into view.
+// Cohesion-style "About me": the title stays pinned while the cards rise up
+// from the bottom and stack on top of one another as you scroll (CSS sticky).
 export default function AboutStack() {
-  const rootRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const els = rootRef.current?.querySelectorAll("[data-rise]");
-    if (!els || !els.length) return;
-
-    if (!("IntersectionObserver" in window)) {
-      els.forEach((el) => el.classList.add("in"));
-      return;
-    }
-
-    const io = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((e) => {
-          if (e.isIntersecting) {
-            e.target.classList.add("in");
-            io.unobserve(e.target);
-          }
-        });
-      },
-      { threshold: 0.35 }
-    );
-
-    els.forEach((el) => io.observe(el));
-    return () => io.disconnect();
-  }, []);
-
   return (
-    <div className="co-shell" ref={rootRef}>
-      <div className="co-about-head">
+    <div className="co-about-wrap">
+      <div className="co-shell co-about-head">
         <span className="co-eyebrow">Get to know me</span>
         <h2 className="co-display">
           About <em>me</em>
         </h2>
       </div>
 
-      <div className="co-about-stack">
+      <div className="co-shell co-about-stack">
         {cards.map((card, i) => (
           <article
             key={i}
             className="co-acard"
-            data-rise
-            style={{ ["--rot" as string]: `${card.rot}deg`, zIndex: i + 1 }}
+            style={{ "--rot": `${card.rot}deg`, zIndex: i + 1 } as CSSProperties}
           >
             <div className="co-acard-inner">
               <p>{card.text}</p>
