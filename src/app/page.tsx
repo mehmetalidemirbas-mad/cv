@@ -1,8 +1,9 @@
+import Image from "next/image";
 import Link from "next/link";
 import BrandIcon from "./_components/BrandIcon";
 import ContactCard from "./_components/ContactCard";
 import LinkedInCards from "./_components/LinkedInCards";
-import { IconArrowRight, IconExternal, IconLinkedIn } from "./_components/icons";
+import { IconAbout, IconArrowRight, IconContact, IconContent, IconExternal } from "./_components/icons";
 import { posts } from "./_components/linkedin-posts";
 import { socials } from "./_components/nav-items";
 
@@ -24,33 +25,53 @@ const stackPreview = [
 export default function Home() {
   return (
     <main id="top">
-      <header className="hero">
-        <div className="wrap">
-          <div className="hero-card">
-            <h1 data-reveal>
+      <header className="mk-hero">
+        <div className="mk-shell">
+          <div className="mk-hero-inner" data-reveal>
+            <h1 className="mk-hero-title">
               Hi, I&apos;m
-              <br />
+              <span className="mk-hero-ava">
+                <Image src="/foto.webp" alt="Ali Demirbaş" width={96} height={96} priority />
+              </span>
               Ali Demirbaş.
             </h1>
-            <p className="sub" data-reveal>
-              <b>Performance &amp; Growth Strategist.</b> I help digital products scale through
-              analytics, experimentation, and performance marketing.
+            <p className="mk-hero-sub">
+              Performance &amp; Growth Strategist. I help digital products scale through analytics,
+              experimentation, and performance marketing.
             </p>
-            <div className="hero-cta" data-reveal>
-              <Link className="btn btn--primary" href="/about">
-                Explore my experience
+          </div>
+
+          <div className="mk-cards" data-reveal>
+            <Link className="mk-card" href="/about">
+              <span className="mk-card-ic">
+                <IconAbout />
+              </span>
+              <h3>About me</h3>
+              <p>A closer look at my experience, skills, and growth approach.</p>
+              <span className="mk-card-go">
                 <IconArrowRight />
-              </Link>
-              <a
-                className="btn btn--dark btn--icon"
-                href={socials.linkedin}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="LinkedIn"
-              >
-                <IconLinkedIn />
-              </a>
-            </div>
+              </span>
+            </Link>
+            <Link className="mk-card" href="/content">
+              <span className="mk-card-ic">
+                <IconContent />
+              </span>
+              <h3>Insights</h3>
+              <p>Growth, CRO, and analytics ideas, shared on LinkedIn.</p>
+              <span className="mk-card-go">
+                <IconArrowRight />
+              </span>
+            </Link>
+            <Link className="mk-card" href="/contact">
+              <span className="mk-card-ic">
+                <IconContact />
+              </span>
+              <h3>Get in touch</h3>
+              <p>Open to roles, collaborations, and interesting problems.</p>
+              <span className="mk-card-go">
+                <IconArrowRight />
+              </span>
+            </Link>
           </div>
         </div>
       </header>

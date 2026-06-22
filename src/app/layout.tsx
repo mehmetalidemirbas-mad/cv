@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import { DM_Sans } from "next/font/google";
 import "./globals.css";
-import Sidebar from "./_components/Sidebar";
-import MobileTopbar from "./_components/MobileTopbar";
-import TabBar from "./_components/TabBar";
+import Navbar from "./_components/Navbar";
 import Footer from "./_components/Footer";
 
 const dmSans = DM_Sans({
@@ -46,9 +44,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={dmSans.variable}>
       <body>
-        <Sidebar />
-        <MobileTopbar />
-        <TabBar />
+        <Navbar />
         <div className="app-main">
           {children}
           <Footer />
